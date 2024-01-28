@@ -24,9 +24,9 @@ class AppBlocObserver extends BlocObserver {
 }
 
 void bootstrap(FutureOr<Widget> Function() builder) {
-  WidgetsFlutterBinding.ensureInitialized();
   runZonedGuarded(
     () async {
+      WidgetsFlutterBinding.ensureInitialized();
       await configureDependencies();
       LocaleSettings.useDeviceLocale();
       FlutterError.onError = (details) {
