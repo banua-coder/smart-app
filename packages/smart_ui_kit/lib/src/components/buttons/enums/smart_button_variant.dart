@@ -26,11 +26,11 @@ enum SmartButtonVariant {
             foregroundColor: Colors.white,
           ),
         tertiary => ButtonVariantData(
-            backgroundColor: context.smartColor.background.solid.neutral,
+            backgroundColor: context.smartColor.background.solid.gray,
             outlineBgColor: Colors.transparent,
-            outlineBorderColor: context.smartColor.background.solid.neutral,
+            outlineBorderColor: context.smartColor.background.solid.gray,
             borderColor: context.smartColor.outline.neutral.strong,
-            outlineFgColor: context.smartColor.text.solid.neutral,
+            outlineFgColor: context.smartColor.text.solid.gray,
             foregroundColor: Colors.white,
           ),
         danger => ButtonVariantData(
