@@ -30,7 +30,7 @@ jobs:
           cp .env.example .env
           cp .env.example .env.staging
       - name: ⚙️ Setup Melos
-        uses: bluefireteam/melos-action@v2
+        uses: bluefireteam/melos-action@v3
       - name: ✨ Check Formatting
         run: |
           melos format
