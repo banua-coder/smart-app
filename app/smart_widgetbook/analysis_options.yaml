@@ -1,0 +1,5 @@
+include: ../../shared/dependencies/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - "**.directories.dart"

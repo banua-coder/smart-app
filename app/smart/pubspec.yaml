@@ -1,0 +1,35 @@
+name: smart
+description: "A Flutter app project of Smart"
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+version: 0.0.1
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+
+dependencies:
+  config:
+    path: ../../shared/config
+  core:
+    path: ../../packages/core
+  cupertino_icons: ^1.0.2
+  dependencies:
+    path: ../../shared/dependencies
+  flutter:
+    sdk: flutter
+  flutter_native_splash: ^2.3.9
+  i10n:
+    path: ../../shared/i10n
+  smart_ui_kit:
+    path: ../../packages/smart_ui_kit
+
+dev_dependencies:
+  change_app_package_name: ^1.1.0
+  flutter_flavorizr: ^2.2.1
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^5.1.0
+
+flutter:
+  uses-material-design: true

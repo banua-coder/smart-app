@@ -1,0 +1,25 @@
+flavors:
+  development:
+    app:
+      name: "SmaRT [Dev]"
+    android:
+      flavorDimension: "app"
+      applicationId: "com.banuacoder.smart.dev"
+    ios:
+      bundleId: "com.banuacoder.smart.dev"
+  staging:
+    app:
+      name: "SmaRT [STG]"
+    android:
+      flavorDimension: "app"
+      applicationId: "com.banuacoder.smart.stg"
+    ios:
+      bundleId: "com.banuacoder.smart.stg"
+  production:
+    app:
+      name: "SmaRT"
+    android:
+      flavorDimension: "app"
+      applicationId: "com.banuacoder.smart"
+    ios:
+      bundleId: "com.banuacoder.smart"

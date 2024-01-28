@@ -1,0 +1,531 @@
+{
+    "name": "Smart",
+    "prefix": "Smart",
+    "domain": "com",
+    "organization": "Banuacoder",
+    "colors": [
+        {
+            "name": "gray",
+            "isMaterialColor": true,
+            "defaultColor": "737271",
+            "value": [
+                {
+                    "level": 0,
+                    "value": "FFFFFF"
+                },
+                {
+                    "level": 25,
+                    "value": "FBFBF9"
+                },
+                {
+                    "level": 50,
+                    "value": "F9F8F6"
+                },
+                {
+                    "level": 100,
+                    "value": "F3F1EE"
+                },
+                {
+                    "level": 200,
+                    "value": "EBE9E5"
+                },
+                {
+                    "level": 300,
+                    "value": "D5D4D2"
+                },
+                {
+                    "level": 400,
+                    "value": "A4A3A2"
+                },
+                {
+                    "level": 500,
+                    "value": "737271"
+                },
+                {
+                    "level": 600,
+                    "value": "535352"
+                },
+                {
+                    "level": 700,
+                    "value": "41403E"
+                },
+                {
+                    "level": 800,
+                    "value": "302E2C"
+                },
+                {
+                    "level": 900,
+                    "value": "24221F"
+                }
+            ]
+        },
+        {
+            "name": "primary",
+            "isMaterialColor": true,
+            "defaultColor": "0b92d5",
+            "value": [
+                {
+                    "level": 50,
+                    "value": "f1f9fe"
+                },
+                {
+                    "level": 100,
+                    "value": "e1f2fd"
+                },
+                {
+                    "level": 200,
+                    "value": "bde6fa"
+                },
+                {
+                    "level": 300,
+                    "value": "82d2f7"
+                },
+                {
+                    "level": 400,
+                    "value": "40bbf0"
+                },
+                {
+                    "level": 500,
+                    "value": "17a4e0"
+                },
+                {
+                    "level": 600,
+                    "value": "0b92d5"
+                },
+                {
+                    "level": 700,
+                    "value": "41403E"
+                },
+                {
+                    "level": 800,
+                    "value": "0c5880"
+                },
+                {
+                    "level": 900,
+                    "value": "104a6a"
+                }
+            ]
+        },
+        {
+            "name": "secondary",
+            "isMaterialColor": true,
+            "defaultColor": "8f7de8",
+            "value": [
+                {
+                    "level": 50,
+                    "value": "f5f4fe"
+                },
+                {
+                    "level": 100,
+                    "value": "ecebfc"
+                },
+                {
+                    "level": 200,
+                    "value": "dcdafa"
+                },
+                {
+                    "level": 300,
+                    "value": "c1bdf5"
+                },
+                {
+                    "level": 400,
+                    "value": "a197ee"
+                },
+                {
+                    "level": 500,
+                    "value": "8f7de8"
+                },
+                {
+                    "level": 600,
+                    "value": "6e4ed9"
+                },
+                {
+                    "level": 700,
+                    "value": "5e3bc6"
+                },
+                {
+                    "level": 800,
+                    "value": "4f31a6"
+                },
+                {
+                    "level": 900,
+                    "value": "422a88"
+                }
+            ]
+        },
+        {
+            "name": "error",
+            "isMaterialColor": true,
+            "defaultColor": "F04438",
+            "value": [
+                {
+                    "level": 25,
+                    "value": "FFFBFA"
+                },
+                {
+                    "level": 50,
+                    "value": "FEF3F2"
+                },
+                {
+                    "level": 100,
+                    "value": "FEE4E2"
+                },
+                {
+                    "level": 200,
+                    "value": "FECDCA"
+                },
+                {
+                    "level": 300,
+                    "value": "FDA29B"
+                },
+                {
+                    "level": 400,
+                    "value": "F97066"
+                },
+                {
+                    "level": 500,
+                    "value": "F04438"
+                },
+                {
+                    "level": 600,
+                    "value": "D92D20"
+                },
+                {
+                    "level": 700,
+                    "value": "B42318"
+                },
+                {
+                    "level": 800,
+                    "value": "912018"
+                },
+                {
+                    "level": 900,
+                    "value": "7A271A"
+                }
+            ]
+        },
+        {
+            "name": "success",
+            "isMaterialColor": true,
+            "defaultColor": "16B364",
+            "value": [
+                {
+                    "level": 25,
+                    "value": "F6FEF9"
+                },
+                {
+                    "level": 50,
+                    "value": "E5FBEC"
+                },
+                {
+                    "level": 100,
+                    "value": "D3F8DF"
+                },
+                {
+                    "level": 200,
+                    "value": "AAF0C4"
+                },
+                {
+                    "level": 300,
+                    "value": "73E2A3"
+                },
+                {
+                    "level": 400,
+                    "value": "3CCB7F"
+                },
+                {
+                    "level": 500,
+                    "value": "16B364"
+                },
+                {
+                    "level": 600,
+                    "value": "099250"
+                },
+                {
+                    "level": 700,
+                    "value": "087443"
+                },
+                {
+                    "level": 800,
+                    "value": "095C37"
+                },
+                {
+                    "level": 900,
+                    "value": "084C2E"
+                }
+            ]
+        },
+        {
+            "name": "info",
+            "isMaterialColor": true,
+            "defaultColor": "275CD8",
+            "value": [
+                {
+                    "level": 25,
+                    "value": "E1EAFF"
+                },
+                {
+                    "level": 50,
+                    "value": "C7D8FF"
+                },
+                {
+                    "level": 100,
+                    "value": "ACC2F7"
+                },
+                {
+                    "level": 200,
+                    "value": "7FA0ED"
+                },
+                {
+                    "level": 300,
+                    "value": "5480E8"
+                },
+                {
+                    "level": 400,
+                    "value": "3A6DE4"
+                },
+                {
+                    "level": 500,
+                    "value": "275CD8"
+                },
+                {
+                    "level": 600,
+                    "value": "184DC8"
+                },
+                {
+                    "level": 700,
+                    "value": "1342AF"
+                },
+                {
+                    "level": 800,
+                    "value": "113997"
+                },
+                {
+                    "level": 900,
+                    "value": "0E3181"
+                }
+            ]
+        },
+        {
+            "name": "warning",
+            "isMaterialColor": true,
+            "defaultColor": "FDBB11",
+            "value": [
+                {
+                    "level": 25,
+                    "value": "FFF8E7"
+                },
+                {
+                    "level": 50,
+                    "value": "FFF1CF"
+                },
+                {
+                    "level": 100,
+                    "value": "FEEBB8"
+                },
+                {
+                    "level": 200,
+                    "value": "FEE4A0"
+                },
+                {
+                    "level": 300,
+                    "value": "FED670"
+                },
+                {
+                    "level": 400,
+                    "value": "FDC941"
+                },
+                {
+                    "level": 500,
+                    "value": "FDBB11"
+                },
+                {
+                    "level": 600,
+                    "value": "D89C00"
+                },
+                {
+                    "level": 700,
+                    "value": "B28000"
+                },
+                {
+                    "level": 800,
+                    "value": "7A5900"
+                },
+                {
+                    "level": 900,
+                    "value": "523A00"
+                }
+            ]
+        },
+        {
+            "name": "bgMain",
+            "isMaterialColor": false,
+            "isDark": false,
+            "useHex": false,
+            "value": "gray.shade50"
+        },
+        {
+            "name": "bgMainDark",
+            "isMaterialColor": false,
+            "isDark": true,
+            "useHex": false,
+            "value": "gray.shade900"
+        },
+        {
+            "name": "bgSubtle",
+            "isMaterialColor": false,
+            "isDark": false,
+            "useHex": false,
+            "value": "gray.shade100"
+        },
+        {
+            "name": "bgSubtleDark",
+            "isMaterialColor": false,
+            "isDark": true,
+            "useHex": false,
+            "value": "gray.shade800"
+        },
+        {
+            "name": "bgStrong",
+            "isMaterialColor": false,
+            "isDark": false,
+            "useHex": false,
+            "value": "gray.shade200"
+        },
+        {
+            "name": "bgStrongDark",
+            "isMaterialColor": false,
+            "isDark": true,
+            "useHex": false,
+            "value": "gray.shade700"
+        },
+        {
+            "name": "bgWhite",
+            "isMaterialColor": false,
+            "isDark": false,
+            "useHex": true,
+            "value": "FFFFFF"
+        },
+        {
+            "name": "bgWhiteDark",
+            "isMaterialColor": false,
+            "isDark": true,
+            "useHex": false,
+            "value": "gray.shade900"
+        },
+        {
+            "name": "bgInverse",
+            "isMaterialColor": false,
+            "isDark": false,
+            "useHex": false,
+            "value": "gray.shade900"
+        },
+        {
+            "name": "bgInverseDark",
+            "isMaterialColor": false,
+            "isDark": true,
+            "useHex": true,
+            "value": "FFFFFF"
+        }
+    ],
+    "colorGroup": [
+        {
+            "name": "neutral",
+            "privateConstructor": false,
+            "properties": [
+                {
+                    "type": "Color",
+                    "name": "main"
+                },
+                {
+                    "type": "Color",
+                    "name": "subtle"
+                },
+                {
+                    "type": "Color",
+                    "name": "strong"
+                },
+                {
+                    "type": "Color",
+                    "name": "white"
+                },
+                {
+                    "type": "Color",
+                    "name": "inverse"
+                }
+            ]
+        },
+        {
+            "name": "background",
+            "privateConstructor": true,
+            "properties": [
+                {
+                    "type": "SmartNeutralColor",
+                    "name": "neutral"
+                }
+            ],
+            "factories": [
+                {
+                    "factory": "light",
+                    "values": [
+                        {
+                            "name": "neutral",
+                            "values": [
+                                {
+                                    "name": "main",
+                                    "value": "bgMain"
+                                },
+                                {
+                                    "name": "subtle",
+                                    "value": "bgSubtle"
+                                },
+                                {
+                                    "name": "strong",
+                                    "value": "bgStrong"
+                                },
+                                {
+                                    "name": "white",
+                                    "value": "bgWhite"
+                                },
+                                {
+                                    "name": "inverse",
+                                    "value": "bgInverse"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "factory": "dark",
+                    "values": [
+                        {
+                            "name": "neutral",
+                            "values": [
+                                {
+                                    "name": "main",
+                                    "value": "bgMainDark"
+                                },
+                                {
+                                    "name": "subtle",
+                                    "value": "bgSubtleDark"
+                                },
+                                {
+                                    "name": "strong",
+                                    "value": "bgStrongDark"
+                                },
+                                {
+                                    "name": "white",
+                                    "value": "bgWhiteDark"
+                                },
+                                {
+                                    "name": "inverse",
+                                    "value": "bgInverseDark"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

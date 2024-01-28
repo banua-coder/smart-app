@@ -1,0 +1,25 @@
+name: i10n
+description: "A Translation related package for Smart."
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: ">=3.2.3 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  slang: ^3.28.0
+  slang_flutter: ^3.28.0
+
+dev_dependencies:
+  build_runner: ^2.4.7
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+  slang_build_runner: ^3.28.0
+  very_good_analysis: ^5.1.0
+
