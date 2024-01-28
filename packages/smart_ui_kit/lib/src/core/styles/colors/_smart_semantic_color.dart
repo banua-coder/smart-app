@@ -8,7 +8,7 @@ class SmartSemanticColor<T> {
   final T success;
   final T info;
   final T warning;
-  final T neutral;
+  final T gray;
 
   const SmartSemanticColor({
     required this.primary,
@@ -17,7 +17,6 @@ class SmartSemanticColor<T> {
     required this.success,
     required this.info,
     required this.warning,
-    required this.neutral,
+    required this.gray,
   });
-  
 }

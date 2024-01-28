@@ -19,7 +19,7 @@ class SmartOutlineColor {
           success: SmartColors.success.shade500.withOpacity(0.25),
           info: SmartColors.info.shade500.withOpacity(0.25),
           warning: SmartColors.warning.shade500.withOpacity(0.25),
-          neutral: SmartColors.gray.shade500.withOpacity(0.25),
+          gray: SmartColors.gray.shade500.withOpacity(0.25),
         ),
       );
 
@@ -32,7 +32,7 @@ class SmartOutlineColor {
           success: SmartColors.success.shade300.withOpacity(0.25),
           info: SmartColors.info.shade300.withOpacity(0.25),
           warning: SmartColors.warning.shade300.withOpacity(0.25),
-          neutral: SmartColors.gray.shade300.withOpacity(0.25),
+          gray: SmartColors.gray.shade300.withOpacity(0.25),
         ),
       );
 }

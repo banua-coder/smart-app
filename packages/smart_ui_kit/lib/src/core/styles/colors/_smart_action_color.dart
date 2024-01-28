@@ -7,7 +7,7 @@ class SmartActionColor extends SmartSemanticColor<MaterialColor> {
     required super.secondary,
     required super.error,
     required super.info,
-    required super.neutral,
+    required super.gray,
     required super.success,
     required super.warning,
   });
@@ -19,6 +19,6 @@ class SmartActionColor extends SmartSemanticColor<MaterialColor> {
         success: SmartColors.success,
         info: SmartColors.info,
         warning: SmartColors.warning,
-        neutral: SmartColors.gray,
+        gray: SmartColors.gray,
       );
 }
