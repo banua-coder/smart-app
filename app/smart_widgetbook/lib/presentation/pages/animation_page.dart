@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:smart_ui_kit/smart_ui_kit.dart';
 import 'package:smart_widgetbook/smart_widgetbook.dart';
 
-class LogoPage extends StatelessWidget {
-  const LogoPage({super.key});
+class AnimationPage extends StatelessWidget {
+  const AnimationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Logo'),
+        title: const Text('Animation'),
         actions: const [
           ThemeSwitcherButton(),
         ],
@@ -21,7 +21,7 @@ class LogoPage extends StatelessWidget {
           crossAxisSpacing: SmartDimension.h16,
           mainAxisSpacing: SmartDimension.v16,
           children: List.generate(
-            SmartLogo.values.length,
+            SmartAnimations.values.length,
             (index) => Container(
               width: 140.w,
               decoration: BoxDecoration(
@@ -36,19 +36,25 @@ class LogoPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  SmartAsset.logo(
+                  SmartAsset.animation(
                     width: 100.w,
                     height: 100.h,
-                    logo: SmartLogo.values[index],
+                    animation: SmartAnimations.values[index],
                     fit: BoxFit.contain,
                   ),
-                  SelectableText(
-                    SmartLogo.values[index].name,
-                    style: SmartTextStyle.bodyXs(
-                      fontWeight: FontWeight.bold,
-                      color: context.smartColor.text.neutral.subtle,
+                  Gap(SmartDimension.v8),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: SmartDimension.h16,
                     ),
-                    textAlign: TextAlign.center,
+                    child: SelectableText(
+                      SmartAnimations.values[index].name,
+                      style: SmartTextStyle.bodyXs(
+                        fontWeight: FontWeight.bold,
+                        color: context.smartColor.text.neutral.subtle,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ],
               ),

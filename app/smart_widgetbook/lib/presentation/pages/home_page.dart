@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:smart_ui_kit/smart_ui_kit.dart';
+import 'package:smart_widgetbook/presentation/pages/animation_page.dart';
 import 'package:smart_widgetbook/presentation/pages/button_page.dart';
 import 'package:smart_widgetbook/presentation/pages/logo_page.dart';
 import 'package:smart_widgetbook/smart_widgetbook.dart';
@@ -29,6 +30,10 @@ class HomePage extends StatelessWidget {
         children: const [
           _SectionTitle(
             title: 'Assets',
+          ),
+          _Button(
+            name: 'Animation',
+            page: AnimationPage(),
           ),
           _Button(
             name: 'Logo',
