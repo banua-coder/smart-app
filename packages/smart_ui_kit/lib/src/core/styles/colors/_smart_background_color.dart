@@ -23,7 +23,7 @@ class SmartBackgroundColor {
           success: SmartColors.success.shade500,
           info: SmartColors.info.shade500,
           warning: SmartColors.warning.shade500,
-          neutral: SmartColors.gray.shade500,
+          neutral: SmartColors.gray.shade800,
         ),
         subtle: SmartSemanticColor<Color>(
           primary: SmartColors.primary.shade50,
@@ -32,7 +32,7 @@ class SmartBackgroundColor {
           success: SmartColors.success.shade50,
           info: SmartColors.info[25]!,
           warning: SmartColors.warning.shade50,
-          neutral: SmartColors.gray.shade50,
+          neutral: SmartColors.gray[25]!,
         ),
         card: SmartBackgroundCardColor.light(),
       );
