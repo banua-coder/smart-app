@@ -41,7 +41,7 @@ jobs:
         run: melos test:with-lcov-coverage
       - name: 🧪✅❌ Publish test results
         id: compute_test_results
-        uses: dorny/test-reporter@v1.7.0
+        uses: dorny/test-reporter@v1.8.0
         with:
           name: "🧪📊 Unit tests report"
           path: test_reports/*_test_report.json
