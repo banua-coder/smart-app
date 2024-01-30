@@ -23,7 +23,7 @@ class SmartBackgroundColor {
           success: SmartColors.success.shade500,
           info: SmartColors.info.shade500,
           warning: SmartColors.warning.shade500,
-          neutral: SmartColors.gray.shade500,
+          gray: SmartColors.gray.shade800,
         ),
         subtle: SmartSemanticColor<Color>(
           primary: SmartColors.primary.shade50,
@@ -32,7 +32,7 @@ class SmartBackgroundColor {
           success: SmartColors.success.shade50,
           info: SmartColors.info[25]!,
           warning: SmartColors.warning.shade50,
-          neutral: SmartColors.gray.shade50,
+          gray: SmartColors.gray[25]!,
         ),
         card: SmartBackgroundCardColor.light(),
       );
@@ -46,7 +46,7 @@ class SmartBackgroundColor {
           success: SmartColors.success.shade600,
           info: SmartColors.info.shade600,
           warning: SmartColors.warning.shade600,
-          neutral: SmartColors.gray.shade600,
+          gray: SmartColors.gray.shade600,
         ),
         subtle: SmartSemanticColor<Color>(
           primary: SmartColors.primary.shade900,
@@ -55,7 +55,7 @@ class SmartBackgroundColor {
           success: SmartColors.success.shade900,
           info: SmartColors.info.shade900,
           warning: SmartColors.warning.shade900,
-          neutral: SmartColors.gray.shade900,
+          gray: SmartColors.gray.shade900,
         ),
         card: SmartBackgroundCardColor.dark(),
       );

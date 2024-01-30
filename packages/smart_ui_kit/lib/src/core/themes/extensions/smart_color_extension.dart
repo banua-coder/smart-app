@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smart_ui_kit/smart_ui_kit.dart';
+import 'package:smart_ui_kit/src/core/styles/colors/colors.dart';
 
 class SmartColorExtension extends ThemeExtension<SmartColorExtension> {
   const SmartColorExtension._({

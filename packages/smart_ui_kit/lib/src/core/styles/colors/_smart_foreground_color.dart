@@ -25,7 +25,7 @@ class SmartTextColor {
           success: SmartColors.success.shade500,
           info: SmartColors.info.shade500,
           warning: SmartColors.warning.shade600,
-          neutral: SmartColors.gray.shade500,
+          gray: SmartColors.gray.shade500,
         ),
       );
 
@@ -44,7 +44,7 @@ class SmartTextColor {
           success: SmartColors.success.shade400,
           info: SmartColors.info.shade400,
           warning: SmartColors.warning.shade400,
-          neutral: SmartColors.gray.shade400,
+          gray: SmartColors.gray.shade400,
         ),
       );
 }
@@ -74,7 +74,7 @@ class SmartIconColor {
           success: SmartColors.success.shade500,
           info: SmartColors.info.shade500,
           warning: SmartColors.warning.shade600,
-          neutral: SmartColors.gray.shade500,
+          gray: SmartColors.gray.shade500,
         ),
       );
 
@@ -93,7 +93,7 @@ class SmartIconColor {
           success: SmartColors.success.shade400,
           info: SmartColors.info.shade400,
           warning: SmartColors.warning.shade400,
-          neutral: SmartColors.gray.shade400,
+          gray: SmartColors.gray.shade400,
         ),
       );
 }

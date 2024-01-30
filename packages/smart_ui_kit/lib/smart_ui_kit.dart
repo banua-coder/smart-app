@@ -5,6 +5,7 @@ library smart_ui_kit;
 
 // 3rd party packages
 export 'package:flutter_screenutil/flutter_screenutil.dart';
+export 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 export 'package:gap/gap.dart';
 export 'package:nil/nil.dart';
 
