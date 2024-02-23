@@ -56,7 +56,7 @@ linter:
     # In general there are plenty of valid reasons to return `null`, not a useful rule
     #
     # Dart SDK: >= 2.0.0 • (Linter v0.1.31)
-    avoid_returning_null: true
+    # avoid_returning_null: true
 
     # Nobody wants to manually wrap lines when changing a few words. This rule is too hard to be a "general" rule
     lines_longer_than_80_chars: false
