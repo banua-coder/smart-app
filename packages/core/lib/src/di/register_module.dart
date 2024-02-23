@@ -8,6 +8,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:logger/logger.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 @module
 abstract class RegisterModule {
@@ -26,6 +27,14 @@ abstract class RegisterModule {
 
   @preResolve
   Future<PackageInfo> get packageInfo => PackageInfo.fromPlatform();
+
+  SupabaseClient get supabaseClient => Supabase.instance.client;
+
+  @preResolve
+  Future<Supabase> get supabase => Supabase.initialize(
+        url: Env.supabaseApiUrl,
+        anonKey: Env.supabaseAnonKey,
+      );
 
   DeviceInfoPlugin get deviceInfo => DeviceInfoPlugin();
 
