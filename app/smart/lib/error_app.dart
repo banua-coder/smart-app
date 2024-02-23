@@ -31,7 +31,7 @@ class ErrorApp extends StatelessWidget {
                         ),
                         Gap(SmartDimension.h16),
                         Text(
-                          context.i10n.errors.something_wrong.title,
+                          context.i10n.errors.somethingWrong.description,
                           textAlign: TextAlign.center,
                           style: SmartTextStyle.headingXs(),
                         ),
@@ -41,7 +41,7 @@ class ErrorApp extends StatelessWidget {
                             horizontal: SmartDimension.v64,
                           ),
                           child: Text(
-                            context.i10n.errors.something_wrong.description,
+                            context.i10n.errors.somethingWrong.description,
                             textAlign: TextAlign.center,
                             style: SmartTextStyle.bodySm(),
                           ),
