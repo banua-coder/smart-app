@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:dependencies/dependencies.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 
-
 @Injectable()
 class DeviceInfoUtil {
   final DeviceInfoPlugin _deviceInfoPlugin;
