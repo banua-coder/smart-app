@@ -64,6 +64,13 @@ scripts:
     packageFilters:
       scope: "*core*"
 
+  generate-widgetbook:
+    run: melos exec -- "dart run build_runner build -d"
+    description: "Generate widgetbook"
+    packageFilters:
+      dependsOn:
+        - "widgetbook_generator"
+
   build:select:
     run: melos exec -- "dart run build_runner build -d"
     description: "Run build runner in selected package that depends on build_runner."
@@ -72,6 +79,7 @@ scripts:
         - "*core*"
         - "*i10n*"
         - "*config*"
+        - "*_widgetbook"
       dependsOn:
         - "build_runner"
 
@@ -211,4 +219,5 @@ scripts:
       melos run generate-assets
       melos run build
       melos run generate-core
+      melos run generate-widgetbook
     description: Initialize Smart.

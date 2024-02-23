@@ -9,9 +9,12 @@ part 'env.g.dart';
   name: 'EnvProd',
 )
 abstract class EnvProd {
-  //TODO: add Env variable you want to generate like example below.
   @EnviedField()
   static final String apiBaseUrl = _EnvProd.apiBaseUrl;
+  @EnviedField()
+  static final String supabaseApiUrl = _EnvProd.supabaseApiUrl;
+  @EnviedField()
+  static final String supabaseAnonKey = _EnvProd.supabaseAnonKey;
 }
 
 @Envied(
@@ -21,9 +24,12 @@ abstract class EnvProd {
   name: 'EnvDev',
 )
 abstract class EnvDev {
-  //TODO: add Env variable you want to generate like example below.
   @EnviedField()
   static final String apiBaseUrl = _EnvDev.apiBaseUrl;
+  @EnviedField()
+  static final String supabaseApiUrl = _EnvDev.supabaseApiUrl;
+  @EnviedField()
+  static final String supabaseAnonKey = _EnvDev.supabaseAnonKey;
 }
 
 @Envied(
@@ -33,7 +39,10 @@ abstract class EnvDev {
   name: 'EnvStg',
 )
 abstract class EnvStg {
-  //TODO: add Env variable you want to generate like example below.
   @EnviedField()
   static final String apiBaseUrl = _EnvStg.apiBaseUrl;
+  @EnviedField()
+  static final String supabaseApiUrl = _EnvStg.supabaseApiUrl;
+  @EnviedField()
+  static final String supabaseAnonKey = _EnvStg.supabaseAnonKey;
 }

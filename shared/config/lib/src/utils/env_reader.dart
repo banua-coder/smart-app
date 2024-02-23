@@ -12,4 +12,18 @@ class Env {
     FlavorStatus.production => EnvProd.apiBaseUrl,
     _ => EnvDev.apiBaseUrl,
   };
+
+  static String supabaseApiUrl = switch (Flavor.status) {
+    FlavorStatus.development => EnvDev.supabaseApiUrl,
+    FlavorStatus.staging => EnvDev.supabaseApiUrl,
+    FlavorStatus.production => EnvDev.supabaseApiUrl,
+    _ => EnvDev.supabaseApiUrl,
+  };
+
+  static String supabaseAnonKey = switch (Flavor.status) {
+    FlavorStatus.development => EnvDev.supabaseAnonKey,
+    FlavorStatus.staging => EnvDev.supabaseAnonKey,
+    FlavorStatus.production => EnvDev.supabaseAnonKey,
+    _ => EnvDev.supabaseAnonKey,
+  };
 }

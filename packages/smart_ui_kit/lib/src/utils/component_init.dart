@@ -4,7 +4,8 @@ import 'package:smart_ui_kit/smart_ui_kit.dart';
 
 class SmartComponentInit extends StatelessWidget {
   const SmartComponentInit({
-    required this.builder, super.key,
+    required this.builder,
+    super.key,
     this.designSize,
   });
 

@@ -3,6 +3,8 @@
 /// {@endtemplate}
 library core;
 
+export 'package:supabase_flutter/supabase_flutter.dart' hide LocalStorage;
+
 export 'src/data/data.dart';
 export 'src/di/service_locator.dart';
 export 'src/exceptions/exceptions.dart';
