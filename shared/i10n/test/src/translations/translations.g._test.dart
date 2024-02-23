@@ -16,7 +16,7 @@ void main() {
         () {
           test(
             'should compile english translations',
-            () => expect(AppLocale.en.build().app_name, 'Smart'),
+            () => expect(AppLocale.en.build().general.appName, 'Smart'),
           );
         },
       );
@@ -26,7 +26,7 @@ void main() {
         () {
           test(
             'should compile indonesian translations',
-            () => expect(AppLocale.id.build().app_name, 'Smart'),
+            () => expect(AppLocale.id.build().general.appName, 'Smart'),
           );
         },
       );
