@@ -4,10 +4,10 @@ import 'package:smart/app.dart';
 import 'package:smart/bootstrap.dart';
 
 void main() => bootstrap(
-    () async {
-      Flavor.status = FlavorStatus.development;
-      return TranslationProvider(
-        child: const App(),
-      );
-    },
-  );
+      () async {
+        Flavor.status = FlavorStatus.development;
+        return TranslationProvider(
+          child: const App(),
+        );
+      },
+    );
