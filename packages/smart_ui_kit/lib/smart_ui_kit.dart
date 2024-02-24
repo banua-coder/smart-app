@@ -16,6 +16,6 @@ export 'src/foundations/global_foundations.dart';
 // molecules
 export 'src/molecules/molecules.dart';
 // tokens
-export 'src/tokens/tokens.dart';
+export 'src/tokens/global_tokens.dart';
 // utils
 export 'src/utils/utils.dart';
