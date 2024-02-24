@@ -72,7 +72,7 @@ Widget outlineUseCase(BuildContext context) => OutlineColorPage(
     );
 
 @UseCase(
-  name: 'Outline',
+  name: 'Overlay',
   type: Widget,
 )
 Widget overlayUseCase(BuildContext context) => OverlayColorPage(
