@@ -7,6 +7,8 @@
 
 <h1 align="center">SmaRT App Monorepo</h1>
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a43fde26812943039a1e1aae8f46b5c5)](https://app.codacy.com/gh/banua-coder/smart-app/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 A comprehensive monorepo containing the Flutter source code for the SmaRT App ecosystem.
 
 ## Project Strucutre
