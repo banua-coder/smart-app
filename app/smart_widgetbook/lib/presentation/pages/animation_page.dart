@@ -15,11 +15,11 @@ class AnimationPage extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(SmartDimension.r16),
+        padding: EdgeInsets.all(SmartDimension.size16.r),
         child: StaggeredGrid.count(
           crossAxisCount: 2,
-          crossAxisSpacing: SmartDimension.h16,
-          mainAxisSpacing: SmartDimension.v16,
+          crossAxisSpacing: SmartDimension.size16.w,
+          mainAxisSpacing: SmartDimension.size16.h,
           children: List.generate(
             SmartAnimations.values.length,
             (index) => Container(
@@ -31,7 +31,7 @@ class AnimationPage extends StatelessWidget {
                 ),
                 color: context.smartColor.background.card.main,
               ),
-              padding: EdgeInsets.all(SmartDimension.r16),
+              padding: EdgeInsets.all(SmartDimension.size16.r),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
@@ -42,17 +42,13 @@ class AnimationPage extends StatelessWidget {
                     animation: SmartAnimations.values[index],
                     fit: BoxFit.contain,
                   ),
-                  Gap(SmartDimension.v8),
+                  Gap(SmartDimension.size8.h),
                   Padding(
                     padding: EdgeInsets.symmetric(
-                      horizontal: SmartDimension.h16,
+                      horizontal: SmartDimension.size16.w,
                     ),
-                    child: SelectableText(
+                    child: SmartTextBodyXs(
                       SmartAnimations.values[index].name,
-                      style: SmartTextStyle.bodyXs(
-                        fontWeight: FontWeight.bold,
-                        color: context.smartColor.text.neutral.subtle,
-                      ),
                       textAlign: TextAlign.center,
                     ),
                   ),

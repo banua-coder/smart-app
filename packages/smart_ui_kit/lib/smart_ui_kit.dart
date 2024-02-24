@@ -9,11 +9,13 @@ export 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 export 'package:gap/gap.dart';
 export 'package:nil/nil.dart';
 
-// components
-export 'src/components/components.dart';
-
-// core
-export 'src/core/core.dart';
-
+// atoms
+export 'src/atoms/atoms.dart';
+// foundations
+export 'src/foundations/global_foundations.dart';
+// molecules
+export 'src/molecules/molecules.dart';
+// tokens
+export 'src/tokens/global_tokens.dart';
 // utils
 export 'src/utils/utils.dart';

@@ -29,21 +29,19 @@ class ErrorApp extends StatelessWidget {
                           width: 0.5.sw,
                           fit: BoxFit.cover,
                         ),
-                        Gap(SmartDimension.h16),
-                        Text(
+                        Gap(SmartDimension.size16.h),
+                        SmartTextHeadingXs(
                           context.i10n.errors.somethingWrong.description,
                           textAlign: TextAlign.center,
-                          style: SmartTextStyle.headingXs(),
                         ),
-                        Gap(SmartDimension.h8),
+                        Gap(SmartDimension.size8.h),
                         Padding(
                           padding: EdgeInsets.symmetric(
-                            horizontal: SmartDimension.v64,
+                            horizontal: SmartDimension.size64.w,
                           ),
-                          child: Text(
+                          child: SmartTextBodySm(
                             context.i10n.errors.somethingWrong.description,
                             textAlign: TextAlign.center,
-                            style: SmartTextStyle.bodySm(),
                           ),
                         ),
                       ],
@@ -63,22 +61,19 @@ class ErrorApp extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text(
+                            SmartTextBodySm(
                               getIt<PackageInfoUtil>().appName(),
-                              style: SmartTextStyle.bodySm(),
                             ),
                             const Text(
                               ' - ',
                             ),
-                            Text(
+                            SmartTextBodySm(
                               'v${getIt<PackageInfoUtil>().version()}',
-                              style: SmartTextStyle.bodySm(
-                                fontWeight: FontWeight.w700,
-                              ),
+                              fontWeight: FontWeight.w700,
                             ),
                           ],
                         ),
-                        Gap(SmartDimension.h32),
+                        Gap(SmartDimension.size32.h),
                       ],
                     ),
                   ),

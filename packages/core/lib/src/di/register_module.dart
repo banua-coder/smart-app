@@ -47,7 +47,7 @@ abstract class RegisterModule {
         ),
       );
 
-  ///TODO: Update your HttpClient and apiBaseUrl
+  // TODO(ryanaidilp): Update your HttpClient and apiBaseUrl
   HttpClient get httpClient => HttpClient.init(
         HttpSetting(
           baseUrl: Env.apiBaseUrl,

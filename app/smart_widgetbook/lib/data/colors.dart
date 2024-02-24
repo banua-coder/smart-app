@@ -337,43 +337,36 @@ List<ColorData> getColors(BuildContext context) => [
       ),
       ColorData(
         token: 'outline.color.primary',
-        textColor: Colors.white,
         color: context.smartColor.outline.color.primary,
         colorType: ColorType.outline,
       ),
       ColorData(
         token: 'outline.color.secondary',
-        textColor: Colors.white,
         color: context.smartColor.outline.color.secondary,
         colorType: ColorType.outline,
       ),
       ColorData(
         token: 'outline.color.gray',
-        textColor: Colors.white,
         color: context.smartColor.outline.color.gray,
         colorType: ColorType.outline,
       ),
       ColorData(
         token: 'outline.color.info',
-        textColor: Colors.white,
         color: context.smartColor.outline.color.info,
         colorType: ColorType.outline,
       ),
       ColorData(
         token: 'outline.color.success',
-        textColor: Colors.white,
         color: context.smartColor.outline.color.success,
         colorType: ColorType.outline,
       ),
       ColorData(
         token: 'outline.color.warning',
-        textColor: Colors.white,
         color: context.smartColor.outline.color.warning,
         colorType: ColorType.outline,
       ),
       ColorData(
         token: 'outline.color.error',
-        textColor: Colors.white,
         color: context.smartColor.outline.color.error,
         colorType: ColorType.outline,
       ),

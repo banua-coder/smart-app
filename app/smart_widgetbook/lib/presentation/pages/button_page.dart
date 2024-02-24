@@ -61,8 +61,8 @@ class _ButtonPageState extends State<ButtonPage> {
                     color: context.smartColor.icon.neutral.main,
                     size: 20.sp,
                   ),
-                  label: Text(value.name),
-                  labelStyle: SmartTextStyle.bodySm(
+                  label: SmartTextBodySm(
+                    value.name,
                     fontWeight: FontWeight.bold,
                     color: context.smartColor.text.neutral.strong,
                   ),
@@ -109,7 +109,7 @@ class _ButtonList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => SingleChildScrollView(
-        padding: EdgeInsets.all(SmartDimension.r16),
+        padding: EdgeInsets.all(SmartDimension.size16.r),
         child: Column(
           children: [
             SmartButton(
@@ -119,7 +119,7 @@ class _ButtonList extends StatelessWidget {
               onPressed: () async {},
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -132,7 +132,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -145,7 +145,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -162,7 +162,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -170,7 +170,7 @@ class _ButtonList extends StatelessWidget {
               label: 'Filled (Disabled)',
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -180,7 +180,7 @@ class _ButtonList extends StatelessWidget {
               onPressed: () async {},
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -194,7 +194,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -208,7 +208,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -226,7 +226,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -235,7 +235,7 @@ class _ButtonList extends StatelessWidget {
               type: SmartButtonType.outline,
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -245,7 +245,7 @@ class _ButtonList extends StatelessWidget {
               onPressed: () async {},
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -259,7 +259,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -273,7 +273,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,
@@ -291,7 +291,7 @@ class _ButtonList extends StatelessWidget {
               ),
             ),
             Gap(
-              SmartDimension.v8,
+              SmartDimension.size8.h,
             ),
             SmartButton(
               variant: variant,

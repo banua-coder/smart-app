@@ -25,11 +25,9 @@ class BackgroundColorPage extends StatelessWidget {
               color: context.smartColor.outline.neutral.main,
             ),
           ),
-          child: Text(
+          child: SmartTextBody(
             colorData.token.replaceAll('.', '/'),
-            style: SmartTextStyle.body(
-              color: colorData.textColor,
-            ),
+            color: colorData.textColor,
             textAlign: TextAlign.center,
           ),
         ),
