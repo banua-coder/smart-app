@@ -189,25 +189,30 @@ class _ButtonWidget extends StatelessWidget {
                 width: 1.sp,
               ),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                if (leading != null) ...[
-                  leading!,
-                  const Gap(SmartDimension.size8),
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: SmartDimension.size4.w,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (leading != null) ...[
+                    leading!,
+                    const Gap(SmartDimension.size8),
+                  ],
+                  Text(
+                    label,
+                    style: size.data.textStyle,
+                    textAlign: TextAlign.center,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  if (trailing != null) ...[
+                    const Gap(SmartDimension.size8),
+                    trailing!,
+                  ],
                 ],
-                Text(
-                  label,
-                  style: size.data.textStyle,
-                  textAlign: TextAlign.center,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                if (trailing != null) ...[
-                  const Gap(SmartDimension.size8),
-                  trailing!,
-                ],
-              ],
+              ),
             ),
           ),
         ),
