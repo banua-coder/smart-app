@@ -205,7 +205,6 @@ class _ButtonWidget extends StatelessWidget {
         color: _backgroundColor(context),
         disabledColor: type.data(context).disabledBgColor,
         disabledTextColor: type.data(context).disabledFgColor,
-        padding: size.data.padding,
         focusColor: Colors.transparent,
         textColor: _textColor(context),
         shape: RoundedRectangleBorder(
@@ -216,9 +215,7 @@ class _ButtonWidget extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: SmartDimension.size4.w,
-          ),
+          padding: size.data.padding,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
