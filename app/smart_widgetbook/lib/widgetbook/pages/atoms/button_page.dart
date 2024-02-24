@@ -7,11 +7,17 @@ class ButtonPage extends StatelessWidget {
     this.size = SmartButtonSize.md,
     this.enable = true,
     this.debounce = true,
+    this.wrap = true,
+    this.showLeading = false,
+    this.showTrailing = false,
     this.variant = SmartButtonVariant.primary,
     this.type = SmartButtonType.filled,
     super.key,
   });
 
+  final bool wrap;
+  final bool showLeading;
+  final bool showTrailing;
   final bool enable;
   final bool debounce;
   final String label;
@@ -36,6 +42,19 @@ class ButtonPage extends StatelessWidget {
             onPressed: () async {},
             variant: variant,
             debounce: debounce,
+            wrap: wrap,
+            leading: showLeading
+                ? Icon(
+                    Icons.download_rounded,
+                    size: (size.data.textStyle.fontSize ?? 0) + 6.sp,
+                  )
+                : null,
+            trailing: showTrailing
+                ? Icon(
+                    Icons.arrow_right_rounded,
+                    size: (size.data.textStyle.fontSize ?? 0) + 6.sp,
+                  )
+                : null,
           ),
         ),
       ),

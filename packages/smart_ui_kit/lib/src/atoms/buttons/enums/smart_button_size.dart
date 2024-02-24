@@ -56,7 +56,7 @@ enum SmartButtonSize {
             textStyle: SmartTypographyFoundation.bodyLg(
               fontWeight: FontWeight.w700,
             ),
-            width: 48.w,
+            width: 64.w,
             height: 48.h,
           ),
         xl => ButtonSizeData(
@@ -65,7 +65,7 @@ enum SmartButtonSize {
             textStyle: SmartTypographyFoundation.bodyLg(
               fontWeight: FontWeight.w700,
             ),
-            width: 1.sw,
+            width: 120.sw,
             height: 56.h,
           ),
       };
