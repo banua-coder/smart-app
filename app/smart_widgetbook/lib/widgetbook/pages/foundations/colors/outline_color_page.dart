@@ -19,7 +19,7 @@ class OutlineColorPage extends StatelessWidget {
           width: 150.w,
           height: 150.h,
           alignment: Alignment.center,
-          padding: EdgeInsets.all(SmartDimension.r8),
+          padding: EdgeInsets.all(SmartDimension.size8.r),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(SmartBorderRadius.md),
             border: Border.all(

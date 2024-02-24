@@ -29,16 +29,16 @@ class ErrorApp extends StatelessWidget {
                           width: 0.5.sw,
                           fit: BoxFit.cover,
                         ),
-                        Gap(SmartDimension.h16),
+                        Gap(SmartDimension.size16.h),
                         Text(
                           context.i10n.errors.somethingWrong.description,
                           textAlign: TextAlign.center,
                           style: SmartTextStyle.headingXs(),
                         ),
-                        Gap(SmartDimension.h8),
+                        Gap(SmartDimension.size8.h),
                         Padding(
                           padding: EdgeInsets.symmetric(
-                            horizontal: SmartDimension.v64,
+                            horizontal: SmartDimension.size64.w,
                           ),
                           child: Text(
                             context.i10n.errors.somethingWrong.description,
@@ -78,7 +78,7 @@ class ErrorApp extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Gap(SmartDimension.h32),
+                        Gap(SmartDimension.size32.h),
                       ],
                     ),
                   ),

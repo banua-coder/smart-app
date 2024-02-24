@@ -25,7 +25,7 @@ class IconColorPage extends StatelessWidget {
               size: 24.sp,
               color: colorData.color,
             ),
-            Gap(SmartDimension.h12),
+            Gap(SmartDimension.size12.w),
             Text(
               colorData.token.replaceAll('.', '/'),
               style: SmartTextStyle.body(

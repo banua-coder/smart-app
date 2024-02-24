@@ -194,7 +194,7 @@ class _ButtonWidget extends StatelessWidget {
               children: [
                 if (leading != null) ...[
                   leading!,
-                  Gap(SmartDimension.h8),
+                  const Gap(SmartDimension.size8),
                 ],
                 Text(
                   label,
@@ -204,7 +204,7 @@ class _ButtonWidget extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 if (trailing != null) ...[
-                  Gap(SmartDimension.h8),
+                  const Gap(SmartDimension.size8),
                   trailing!,
                 ],
               ],

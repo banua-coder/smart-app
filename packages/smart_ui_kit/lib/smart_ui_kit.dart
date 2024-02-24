@@ -15,5 +15,8 @@ export 'src/components/components.dart';
 // core
 export 'src/core/core.dart';
 
+// tokens
+export 'src/tokens/tokens.dart';
+
 // utils
 export 'src/utils/utils.dart';

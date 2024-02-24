@@ -12,8 +12,8 @@ enum SmartButtonSize {
   ButtonSizeData get data => switch (this) {
         xs => ButtonSizeData(
             padding: EdgeInsets.symmetric(
-              vertical: SmartDimension.v8,
-              horizontal: SmartDimension.h8,
+              vertical: SmartDimension.size8.h,
+              horizontal: SmartDimension.size8.w,
             ),
             borderRadius: SmartBorderRadius.xs,
             textStyle: SmartTextStyle.bodyXs(
@@ -24,8 +24,8 @@ enum SmartButtonSize {
           ),
         sm => ButtonSizeData(
             padding: EdgeInsets.symmetric(
-              vertical: SmartDimension.v8,
-              horizontal: SmartDimension.h12,
+              vertical: SmartDimension.size8.h,
+              horizontal: SmartDimension.size12.w,
             ),
             borderRadius: SmartBorderRadius.sm,
             textStyle: SmartTextStyle.bodySm(
@@ -36,8 +36,8 @@ enum SmartButtonSize {
           ),
         md => ButtonSizeData(
             padding: EdgeInsets.symmetric(
-              vertical: SmartDimension.v8,
-              horizontal: SmartDimension.h12,
+              vertical: SmartDimension.size8.h,
+              horizontal: SmartDimension.size12.w,
             ),
             borderRadius: SmartBorderRadius.sm,
             textStyle: SmartTextStyle.body(
@@ -48,8 +48,8 @@ enum SmartButtonSize {
           ),
         lg => ButtonSizeData(
             padding: EdgeInsets.symmetric(
-              vertical: SmartDimension.v12,
-              horizontal: SmartDimension.h16,
+              vertical: SmartDimension.size12.h,
+              horizontal: SmartDimension.size16.w,
             ),
             borderRadius: SmartBorderRadius.md,
             textStyle: SmartTextStyle.bodyLg(
@@ -59,7 +59,7 @@ enum SmartButtonSize {
             height: 48.h,
           ),
         xl => ButtonSizeData(
-            padding: EdgeInsets.all(SmartDimension.r16),
+            padding: EdgeInsets.all(SmartDimension.size16.r),
             borderRadius: SmartBorderRadius.md,
             textStyle: SmartTextStyle.bodyLg(
               fontWeight: FontWeight.w700,

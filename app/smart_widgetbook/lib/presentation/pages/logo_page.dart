@@ -15,11 +15,11 @@ class LogoPage extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(SmartDimension.r16),
+        padding: EdgeInsets.all(SmartDimension.size16.r),
         child: StaggeredGrid.count(
           crossAxisCount: 2,
-          crossAxisSpacing: SmartDimension.h16,
-          mainAxisSpacing: SmartDimension.v16,
+          crossAxisSpacing: SmartDimension.size16.w,
+          mainAxisSpacing: SmartDimension.size16.h,
           children: List.generate(
             SmartLogo.values.length,
             (index) => Container(
@@ -31,7 +31,7 @@ class LogoPage extends StatelessWidget {
                 ),
                 color: context.smartColor.background.card.main,
               ),
-              padding: EdgeInsets.all(SmartDimension.r16),
+              padding: EdgeInsets.all(SmartDimension.size16.r),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
