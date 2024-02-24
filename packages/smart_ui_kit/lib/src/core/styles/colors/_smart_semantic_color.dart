@@ -53,6 +53,4 @@ class SmartMaterialColor with SmartMaterialColorMixin {
     required this.warning,
     required this.gray,
   });
-
- 
 }
