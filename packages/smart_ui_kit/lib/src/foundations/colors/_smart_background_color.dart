@@ -1,4 +1,4 @@
-part of 'smart_color_data.dart';
+part of 'smart_color_foundation.dart';
 
 @immutable
 class SmartBackgroundColor {

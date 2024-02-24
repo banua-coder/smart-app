@@ -1,12 +1,13 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smart_ui_kit/smart_ui_kit.dart';
+import 'package:smart_ui_kit/src/tokens/typography/smart_typography.dart';
 
-class SmartTextStyle {
-  const SmartTextStyle._();
+class SmartTypographyFoundation {
+  const SmartTypographyFoundation._();
 
   static TextStyle _base({
-    double fontSize = 14,
+    double fontSize = SmartTypography.body,
     FontWeight? fontWeight = FontWeight.w400,
     Color? color,
     TextDecoration? decoration,
@@ -32,7 +33,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 48,
+        fontSize: SmartTypography.heading3Xl,
         color: color,
         height: height,
         fontWeight: FontWeight.w700,
@@ -48,7 +49,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 40,
+        fontSize: SmartTypography.heading2Xl,
         color: color,
         height: height,
         fontWeight: FontWeight.w700,
@@ -64,7 +65,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 32,
+        fontSize: SmartTypography.headingXl,
         color: color,
         height: height,
         fontWeight: FontWeight.w700,
@@ -80,7 +81,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 24,
+        fontSize: SmartTypography.headingLg,
         color: color,
         height: height,
         fontWeight: FontWeight.w700,
@@ -96,7 +97,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 20,
+        fontSize: SmartTypography.heading,
         color: color,
         height: height,
         fontWeight: FontWeight.w700,
@@ -112,7 +113,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 18,
+        fontSize: SmartTypography.headingSm,
         color: color,
         height: height,
         fontWeight: FontWeight.w700,
@@ -128,7 +129,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 16,
+        fontSize: SmartTypography.headingXs,
         color: color,
         height: height,
         fontWeight: FontWeight.w700,
@@ -145,7 +146,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 16,
+        fontSize: SmartTypography.bodyLg,
         color: color,
         height: height,
         fontWeight: fontWeight,
@@ -178,7 +179,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 12,
+        fontSize: SmartTypography.bodySm,
         color: color,
         height: height,
         fontWeight: fontWeight,
@@ -195,7 +196,7 @@ class SmartTextStyle {
     double? wordSpacing,
   }) =>
       _base(
-        fontSize: 10,
+        fontSize: SmartTypography.bodyXs,
         color: color,
         height: height,
         fontWeight: fontWeight,

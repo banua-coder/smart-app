@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_ui_kit/smart_ui_kit.dart';
 import 'package:smart_ui_kit/src/components/buttons/data/button_size_data.dart';
+import 'package:smart_ui_kit/src/foundations/foundations.dart';
 
 enum SmartButtonSize {
   xs,
@@ -16,7 +17,7 @@ enum SmartButtonSize {
               horizontal: SmartDimension.size8.w,
             ),
             borderRadius: SmartBorderRadius.xs,
-            textStyle: SmartTextStyle.bodyXs(
+            textStyle: SmartTypographyFoundation.bodyXs(
               fontWeight: FontWeight.w700,
             ),
             width: 34.w,
@@ -28,7 +29,7 @@ enum SmartButtonSize {
               horizontal: SmartDimension.size12.w,
             ),
             borderRadius: SmartBorderRadius.sm,
-            textStyle: SmartTextStyle.bodySm(
+            textStyle: SmartTypographyFoundation.bodySm(
               fontWeight: FontWeight.w700,
             ),
             width: 40.w,
@@ -40,7 +41,7 @@ enum SmartButtonSize {
               horizontal: SmartDimension.size12.w,
             ),
             borderRadius: SmartBorderRadius.sm,
-            textStyle: SmartTextStyle.body(
+            textStyle: SmartTypographyFoundation.body(
               fontWeight: FontWeight.w700,
             ),
             width: 48.w,
@@ -52,7 +53,7 @@ enum SmartButtonSize {
               horizontal: SmartDimension.size16.w,
             ),
             borderRadius: SmartBorderRadius.md,
-            textStyle: SmartTextStyle.bodyLg(
+            textStyle: SmartTypographyFoundation.bodyLg(
               fontWeight: FontWeight.w700,
             ),
             width: 48.w,
@@ -61,7 +62,7 @@ enum SmartButtonSize {
         xl => ButtonSizeData(
             padding: EdgeInsets.all(SmartDimension.size16.r),
             borderRadius: SmartBorderRadius.md,
-            textStyle: SmartTextStyle.bodyLg(
+            textStyle: SmartTypographyFoundation.bodyLg(
               fontWeight: FontWeight.w700,
             ),
             width: 1.sw,
