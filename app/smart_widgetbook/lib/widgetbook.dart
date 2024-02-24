@@ -15,7 +15,7 @@ class WidgetbookApp extends StatelessWidget {
         directories: directories,
         addons: [
           TextScaleAddon(
-            scales: [1.0, 2.0],
+            scales: [1.0, 1.2],
             initialScale: 1,
           ),
           ZoomAddon(),
