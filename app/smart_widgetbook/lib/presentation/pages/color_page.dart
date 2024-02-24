@@ -12,21 +12,16 @@ class ColorPage extends StatelessWidget {
         title: const Text('Colors'),
         actions: const [ThemeSwitcherButton()],
       ),
-      body: ListView(
-        children: [
-          _ColorItem(
-            name: 'background.card.main',
-            color: context.smartColor.background.card.main,
-          ),
-          _ColorItem(
-            name: 'background.card.secondary',
-            color: context.smartColor.background.card.secondary,
-          ),
-          _ColorItem(
-            name: 'background.neutral.main',
-            color: context.smartColor.background.neutral.main,
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: getColors(context).length,
+        itemBuilder: (context, index) {
+          final color = getColors(context)[index];
+          return _ColorItem(
+            name: color.token,
+            color: color.color,
+            textColor: color.textColor,
+          );
+        },
       ),
     );
   }
@@ -36,10 +31,12 @@ class _ColorItem extends StatelessWidget {
   const _ColorItem({
     required this.name,
     required this.color,
+    this.textColor,
   });
 
   final String name;
   final Color color;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) => Container(
@@ -48,7 +45,10 @@ class _ColorItem extends StatelessWidget {
         color: color,
         child: Center(
           child: Text(
-            '$name- $color',
+            '$name - $color',
+            style: SmartTextStyle.body(
+              color: textColor ?? context.smartColor.text.neutral.main,
+            ),
           ),
         ),
       );

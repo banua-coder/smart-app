@@ -3,7 +3,7 @@ part of 'smart_color_data.dart';
 @immutable
 class SmartTextColor {
   final SmartForegroundNeutralColor neutral;
-  final SmartSemanticColor<Color> solid;
+  final SmartSemanticColor solid;
 
   const SmartTextColor._({
     required this.neutral,
@@ -18,7 +18,7 @@ class SmartTextColor {
           inverse: SmartColors.textInverse,
           disabled: SmartColors.textDisabled,
         ),
-        solid: SmartSemanticColor<Color>(
+        solid: SmartSemanticColor(
           primary: SmartColors.primary.shade500,
           secondary: SmartColors.secondary.shade500,
           error: SmartColors.error.shade500,
@@ -37,7 +37,7 @@ class SmartTextColor {
           inverse: SmartColors.textInverseDark,
           disabled: SmartColors.textDisabledDark,
         ),
-        solid: SmartSemanticColor<Color>(
+        solid: SmartSemanticColor(
           primary: SmartColors.primary.shade400,
           secondary: SmartColors.secondary.shade400,
           error: SmartColors.error.shade400,
@@ -47,12 +47,17 @@ class SmartTextColor {
           gray: SmartColors.gray.shade400,
         ),
       );
+
+  SmartTextColor lerp(SmartTextColor? other, double t) => SmartTextColor._(
+        neutral: neutral.lerp(other?.neutral, t),
+        solid: solid.lerp(other?.solid, t),
+      );
 }
 
 @immutable
 class SmartIconColor {
   final SmartForegroundNeutralColor neutral;
-  final SmartSemanticColor<Color> solid;
+  final SmartSemanticColor solid;
 
   const SmartIconColor._({
     required this.neutral,
@@ -67,7 +72,7 @@ class SmartIconColor {
           inverse: SmartColors.iconInverse,
           disabled: SmartColors.iconDisabled,
         ),
-        solid: SmartSemanticColor<Color>(
+        solid: SmartSemanticColor(
           primary: SmartColors.primary.shade500,
           secondary: SmartColors.secondary.shade500,
           error: SmartColors.error.shade500,
@@ -86,7 +91,7 @@ class SmartIconColor {
           inverse: SmartColors.iconInverseDark,
           disabled: SmartColors.iconDisabledDark,
         ),
-        solid: SmartSemanticColor<Color>(
+        solid: SmartSemanticColor(
           primary: SmartColors.primary.shade400,
           secondary: SmartColors.secondary.shade400,
           error: SmartColors.error.shade400,
@@ -95,5 +100,10 @@ class SmartIconColor {
           warning: SmartColors.warning.shade400,
           gray: SmartColors.gray.shade400,
         ),
+      );
+
+  SmartIconColor lerp(SmartIconColor? other, double t) => SmartIconColor._(
+        neutral: neutral.lerp(other?.neutral, t),
+        solid: solid.lerp(other?.solid, t),
       );
 }
