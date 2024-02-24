@@ -1,15 +1,52 @@
+import 'package:flutter/material.dart';
+import 'package:smart_ui_kit/src/tokens/typography/smart_typography_data.dart';
+
 class SmartTypography {
   const SmartTypography._();
 
-  static const double bodyXs = 10;
-  static const double bodySm = 12;
-  static const double body = 14;
-  static const double bodyLg = 16;
-  static const double headingXs = 16;
-  static const double headingSm = 18;
-  static const double heading = 20;
-  static const double headingLg = 24;
-  static const double headingXl = 32;
-  static const double heading2Xl = 40;
-  static const double heading3Xl = 48;
+  static const SmartTypographyData bodyXs = SmartTypographyData(
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const SmartTypographyData bodySm = SmartTypographyData(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+  );
+  static const SmartTypographyData body = SmartTypographyData(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
+  static const SmartTypographyData bodyLg = SmartTypographyData(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+  );
+  static const SmartTypographyData headingXs = SmartTypographyData(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+  );
+  static const SmartTypographyData headingSm = SmartTypographyData(
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+  );
+  static const SmartTypographyData heading = SmartTypographyData(
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+  );
+  static const SmartTypographyData headingLg = SmartTypographyData(
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+  );
+  static const SmartTypographyData headingXl = SmartTypographyData(
+    fontSize: 32,
+    fontWeight: FontWeight.w700,
+  );
+  static const SmartTypographyData heading2Xl = SmartTypographyData(
+    fontSize: 40,
+    fontWeight: FontWeight.w700,
+  );
+  static const SmartTypographyData heading3Xl = SmartTypographyData(
+    fontSize: 48,
+    fontWeight: FontWeight.w700,
+  );
 }

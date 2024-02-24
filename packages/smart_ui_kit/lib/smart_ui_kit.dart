@@ -9,6 +9,12 @@ export 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 export 'package:gap/gap.dart';
 export 'package:nil/nil.dart';
 
+// atoms
+export 'src/atoms/atoms.dart';
+
+// molecules
+export 'src/molecules/molecules.dart';
+
 // components
 export 'src/components/components.dart';
 

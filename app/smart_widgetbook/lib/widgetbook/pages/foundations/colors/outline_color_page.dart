@@ -28,11 +28,8 @@ class OutlineColorPage extends StatelessWidget {
             ),
             color: Colors.transparent,
           ),
-          child: Text(
+          child: SmartTextBody(
             colorData.token.replaceAll('.', '/'),
-            style: SmartTextStyle.body(
-              color: context.smartColor.text.neutral.main,
-            ),
             textAlign: TextAlign.center,
           ),
         ),

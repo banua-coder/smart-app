@@ -15,11 +15,8 @@ class TextColorPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: context.smartColor.background.neutral.main,
       body: Center(
-        child: Text(
+        child: SmartTextBody(
           colorData.token.replaceAll('.', '/'),
-          style: SmartTextStyle.body(
-            color: colorData.color,
-          ),
         ),
       ),
     );

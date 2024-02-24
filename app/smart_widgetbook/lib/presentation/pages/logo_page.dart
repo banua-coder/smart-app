@@ -42,12 +42,8 @@ class LogoPage extends StatelessWidget {
                     logo: SmartLogo.values[index],
                     fit: BoxFit.contain,
                   ),
-                  SelectableText(
+                  SmartTextBodyXs(
                     SmartLogo.values[index].name,
-                    style: SmartTextStyle.bodyXs(
-                      fontWeight: FontWeight.bold,
-                      color: context.smartColor.text.neutral.subtle,
-                    ),
                     textAlign: TextAlign.center,
                   ),
                 ],

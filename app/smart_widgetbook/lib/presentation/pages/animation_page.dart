@@ -47,12 +47,8 @@ class AnimationPage extends StatelessWidget {
                     padding: EdgeInsets.symmetric(
                       horizontal: SmartDimension.size16.w,
                     ),
-                    child: SelectableText(
+                    child: SmartTextBodyXs(
                       SmartAnimations.values[index].name,
-                      style: SmartTextStyle.bodyXs(
-                        fontWeight: FontWeight.bold,
-                        color: context.smartColor.text.neutral.subtle,
-                      ),
                       textAlign: TextAlign.center,
                     ),
                   ),

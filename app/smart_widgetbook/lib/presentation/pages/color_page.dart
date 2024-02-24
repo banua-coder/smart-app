@@ -44,11 +44,9 @@ class _ColorItem extends StatelessWidget {
         height: 48.h,
         color: color,
         child: Center(
-          child: Text(
+          child: SmartTextBody(
             '$name - $color',
-            style: SmartTextStyle.body(
-              color: textColor ?? context.smartColor.text.neutral.main,
-            ),
+            color: textColor,
           ),
         ),
       );

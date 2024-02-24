@@ -30,20 +30,18 @@ class ErrorApp extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                         Gap(SmartDimension.size16.h),
-                        Text(
+                        SmartTextHeadingXs(
                           context.i10n.errors.somethingWrong.description,
                           textAlign: TextAlign.center,
-                          style: SmartTextStyle.headingXs(),
                         ),
                         Gap(SmartDimension.size8.h),
                         Padding(
                           padding: EdgeInsets.symmetric(
                             horizontal: SmartDimension.size64.w,
                           ),
-                          child: Text(
+                          child: SmartTextBodySm(
                             context.i10n.errors.somethingWrong.description,
                             textAlign: TextAlign.center,
-                            style: SmartTextStyle.bodySm(),
                           ),
                         ),
                       ],
@@ -63,18 +61,15 @@ class ErrorApp extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text(
+                            SmartTextBodySm(
                               getIt<PackageInfoUtil>().appName(),
-                              style: SmartTextStyle.bodySm(),
                             ),
                             const Text(
                               ' - ',
                             ),
-                            Text(
+                            SmartTextBodySm(
                               'v${getIt<PackageInfoUtil>().version()}',
-                              style: SmartTextStyle.bodySm(
-                                fontWeight: FontWeight.w700,
-                              ),
+                              fontWeight: FontWeight.w700,
                             ),
                           ],
                         ),

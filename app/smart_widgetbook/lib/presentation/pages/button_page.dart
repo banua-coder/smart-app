@@ -61,8 +61,8 @@ class _ButtonPageState extends State<ButtonPage> {
                     color: context.smartColor.icon.neutral.main,
                     size: 20.sp,
                   ),
-                  label: Text(value.name),
-                  labelStyle: SmartTextStyle.bodySm(
+                  label: SmartTextBodySm(
+                    value.name,
                     fontWeight: FontWeight.bold,
                     color: context.smartColor.text.neutral.strong,
                   ),
