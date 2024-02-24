@@ -11,8 +11,6 @@ export 'package:nil/nil.dart';
 
 // atoms
 export 'src/atoms/atoms.dart';
-// components
-export 'src/components/components.dart';
 // core
 export 'src/core/core.dart';
 // molecules

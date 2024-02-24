@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_ui_kit/smart_ui_kit.dart';
-import 'package:smart_ui_kit/src/components/buttons/data/button_size_data.dart';
+import 'package:smart_ui_kit/src/atoms/buttons/data/button_size_data.dart';
 import 'package:smart_ui_kit/src/foundations/foundations.dart';
 
 enum SmartButtonSize {
