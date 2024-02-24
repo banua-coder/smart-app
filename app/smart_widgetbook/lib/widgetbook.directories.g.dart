@@ -9,6 +9,8 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:smart_widgetbook/widgetbook/usecases/asset_use_case.dart'
+    as _i4;
 import 'package:smart_widgetbook/widgetbook/usecases/button_use_case.dart'
     as _i2;
 import 'package:smart_widgetbook/widgetbook/usecases/color_use_case.dart'
@@ -19,6 +21,19 @@ final directories = <_i1.WidgetbookNode>[
   _i1.WidgetbookFolder(
     name: 'Atoms',
     children: [
+      _i1.WidgetbookComponent(
+        name: 'SmartAsset',
+        useCases: [
+          _i1.WidgetbookUseCase(
+            name: 'Animations',
+            builder: _i4.animationUseCase,
+          ),
+          _i1.WidgetbookUseCase(
+            name: 'Logo',
+            builder: _i4.logoUseCase,
+          ),
+        ],
+      ),
       _i1.WidgetbookComponent(
         name: 'SmartButton',
         useCases: [
