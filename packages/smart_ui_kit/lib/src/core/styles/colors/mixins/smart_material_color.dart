@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-mixin SmartMaterialColor {
+mixin SmartMaterialColorMixin {
   MaterialColor lerpMaterialColor(
     MaterialColor a,
     MaterialColor b,

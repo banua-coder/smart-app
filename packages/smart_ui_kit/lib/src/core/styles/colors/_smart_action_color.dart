@@ -1,7 +1,7 @@
 part of 'smart_color_data.dart';
 
 @immutable
-class SmartActionColor extends SmartSemanticColor<MaterialColor> {
+class SmartActionColor extends SmartMaterialColor {
   const SmartActionColor._({
     required super.primary,
     required super.secondary,
@@ -20,5 +20,19 @@ class SmartActionColor extends SmartSemanticColor<MaterialColor> {
         info: SmartColors.info,
         warning: SmartColors.warning,
         gray: SmartColors.gray,
+      );
+
+  SmartActionColor lerp(
+    SmartActionColor other,
+    double t,
+  ) =>
+      SmartActionColor._(
+        primary: lerpMaterialColor(primary, other.primary, t),
+        secondary: lerpMaterialColor(secondary, other.secondary, t),
+        error: lerpMaterialColor(error, other.error, t),
+        success: lerpMaterialColor(success, other.success, t),
+        info: lerpMaterialColor(info, other.info, t),
+        warning: lerpMaterialColor(warning, other.warning, t),
+        gray: lerpMaterialColor(gray, other.gray, t),
       );
 }

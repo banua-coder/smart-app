@@ -3,8 +3,8 @@ part of 'smart_color_data.dart';
 @immutable
 class SmartBackgroundColor {
   final SmartBackgroundNeutralColor neutral;
-  final SmartSemanticColor<Color> solid;
-  final SmartSemanticColor<Color> subtle;
+  final SmartSemanticColor solid;
+  final SmartSemanticColor subtle;
   final SmartBackgroundCardColor card;
 
   const SmartBackgroundColor._({
@@ -16,7 +16,7 @@ class SmartBackgroundColor {
 
   factory SmartBackgroundColor.light() => SmartBackgroundColor._(
         neutral: SmartBackgroundNeutralColor.light(),
-        solid: SmartSemanticColor<Color>(
+        solid: SmartSemanticColor(
           primary: SmartColors.primary.shade500,
           secondary: SmartColors.secondary.shade500,
           error: SmartColors.error.shade500,
@@ -25,7 +25,7 @@ class SmartBackgroundColor {
           warning: SmartColors.warning.shade500,
           gray: SmartColors.gray.shade800,
         ),
-        subtle: SmartSemanticColor<Color>(
+        subtle: SmartSemanticColor(
           primary: SmartColors.primary.shade50,
           secondary: SmartColors.secondary.shade50,
           error: SmartColors.error.shade100,
@@ -39,7 +39,7 @@ class SmartBackgroundColor {
 
   factory SmartBackgroundColor.dark() => SmartBackgroundColor._(
         neutral: SmartBackgroundNeutralColor.dark(),
-        solid: SmartSemanticColor<Color>(
+        solid: SmartSemanticColor(
           primary: SmartColors.primary.shade600,
           secondary: SmartColors.secondary.shade600,
           error: SmartColors.error.shade600,
@@ -48,7 +48,7 @@ class SmartBackgroundColor {
           warning: SmartColors.warning.shade600,
           gray: SmartColors.gray.shade600,
         ),
-        subtle: SmartSemanticColor<Color>(
+        subtle: SmartSemanticColor(
           primary: SmartColors.primary.shade900,
           secondary: SmartColors.secondary.shade900,
           error: SmartColors.error.shade900,
@@ -59,6 +59,16 @@ class SmartBackgroundColor {
         ),
         card: SmartBackgroundCardColor.dark(),
       );
+
+  SmartBackgroundColor lerp(SmartBackgroundColor? other, double t) =>
+      other == null
+          ? this
+          : SmartBackgroundColor._(
+              neutral: neutral.lerp(other.neutral, t),
+              solid: solid.lerp(other.solid, t),
+              subtle: subtle.lerp(other.subtle, t),
+              card: card.lerp(other.card, t),
+            );
 }
 
 @immutable
@@ -80,4 +90,12 @@ class SmartBackgroundCardColor {
         main: SmartColors.gray.shade800,
         secondary: SmartColors.gray.shade700,
       );
+
+  SmartBackgroundCardColor lerp(SmartBackgroundCardColor? other, double t) =>
+      other == null
+          ? this
+          : SmartBackgroundCardColor._(
+              main: Color.lerp(main, other.main, t) ?? main,
+              secondary: Color.lerp(secondary, other.secondary, t) ?? secondary,
+            );
 }
