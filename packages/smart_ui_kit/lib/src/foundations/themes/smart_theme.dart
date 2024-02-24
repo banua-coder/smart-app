@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smart_ui_kit/src/core/themes/extensions/smart_asset_extension.dart';
-import 'package:smart_ui_kit/src/core/themes/extensions/smart_color_extension.dart';
 import 'package:smart_ui_kit/src/foundations/foundations.dart';
 import 'package:smart_ui_kit/src/tokens/colors/colors.dart';
 

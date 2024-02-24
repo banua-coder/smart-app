@@ -11,8 +11,8 @@ export 'package:nil/nil.dart';
 
 // atoms
 export 'src/atoms/atoms.dart';
-// core
-export 'src/core/core.dart';
+// foundations
+export 'src/foundations/global_foundations.dart';
 // molecules
 export 'src/molecules/molecules.dart';
 // tokens
