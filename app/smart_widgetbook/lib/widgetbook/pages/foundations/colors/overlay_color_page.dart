@@ -27,7 +27,6 @@ class OverlayColorPage extends StatelessWidget {
           ),
           child: SmartTextBody(
             colorData.token.replaceAll('.', '/'),
-            
             textAlign: TextAlign.center,
           ),
         ),

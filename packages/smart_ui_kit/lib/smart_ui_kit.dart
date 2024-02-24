@@ -11,18 +11,13 @@ export 'package:nil/nil.dart';
 
 // atoms
 export 'src/atoms/atoms.dart';
-
-// molecules
-export 'src/molecules/molecules.dart';
-
 // components
 export 'src/components/components.dart';
-
 // core
 export 'src/core/core.dart';
-
+// molecules
+export 'src/molecules/molecules.dart';
 // tokens
 export 'src/tokens/tokens.dart';
-
 // utils
 export 'src/utils/utils.dart';

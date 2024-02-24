@@ -13,10 +13,13 @@ class TextColorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: context.smartColor.background.neutral.main,
+      backgroundColor: colorData.token.contains('inverse')
+          ? context.smartColor.background.neutral.inverse
+          : context.smartColor.background.neutral.main,
       body: Center(
         child: SmartTextBody(
           colorData.token.replaceAll('.', '/'),
+          color: colorData.color,
         ),
       ),
     );
