@@ -44,7 +44,14 @@ class SmartColorExtension extends ThemeExtension<SmartColorExtension> {
       return this;
     }
 
-    return other;
+    return SmartColorExtension._(
+      background: background.lerp(other.background, t),
+      text: text.lerp(other.text, t),
+      icon: icon.lerp(other.icon, t),
+      action: action.lerp(other.action, t),
+      outline: outline.lerp(other.outline, t),
+      overlay: Color.lerp(overlay, other.overlay, t) ?? overlay,
+    );
   }
 
   @override
