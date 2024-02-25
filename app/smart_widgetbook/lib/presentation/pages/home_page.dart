@@ -44,9 +44,9 @@ class HomePage extends StatelessWidget {
                 Gap(SmartDimension.size16.h),
                 const CodeSnippetWidget(
                   code: '''
-      dependencies:
-         smart_ui_kit:
-      path: ../packages/smart_ui_kit
+dependencies:
+  smart_ui_kit:
+    path: ../packages/smart_ui_kit
             ''',
                   syntax: Syntax.YAML,
                 ),
