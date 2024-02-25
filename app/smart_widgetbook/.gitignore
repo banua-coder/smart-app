@@ -32,3 +32,4 @@ build/
 
 
 *.directories.dart
+*.g.dart
