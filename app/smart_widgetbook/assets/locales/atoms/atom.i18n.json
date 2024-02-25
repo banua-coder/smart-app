@@ -1,0 +1,18 @@
+{
+    "title": "Atoms",
+    "description": "Atoms are the foundational building blocks in the Atomic Design methodology, representing the smallest, basic UI elements such as buttons, input fields, and icons. They function independently, laying the groundwork for more complex structures by combining to form molecules and organisms within a UI framework.",
+    "childrens": {
+        "animations": {
+            "title": "Animations",
+            "description": "This is a showcase of Animation Component. You can use it by following example below."
+        },
+        "button": {
+            "title": "Button",
+            "description": "This is a showcase of Button Component. You can use it by following example below."
+        },
+        "logo": {
+            "title": "Logo",
+            "description": "This is a showcase of Logo Component. You can use it by following example below."
+        }
+    }
+}
