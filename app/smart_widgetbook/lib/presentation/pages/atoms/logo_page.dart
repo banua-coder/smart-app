@@ -67,48 +67,36 @@ SmartAsset.logo(
           const Divider(),
           SingleChildScrollView(
             padding: EdgeInsets.all(SmartDimension.size16.r),
-            child: StaggeredGrid.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: SmartDimension.size16.w,
-              mainAxisSpacing: SmartDimension.size16.h,
-              children: List.generate(
-                SmartLogo.values.length,
-                (index) => InkWell(
-                  onTap: () =>
-                      _selectedLogoNotifier.value = SmartLogo.values[index],
-                  borderRadius: BorderRadius.circular(SmartBorderRadius.md),
-                  child: ValueListenableBuilder(
-                    valueListenable: _selectedLogoNotifier,
-                    builder: (_, value, __) => AnimatedContainer(
-                      duration: const Duration(milliseconds: 300),
-                      width: 140.w,
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.circular(SmartBorderRadius.md),
-                        border: Border.all(
-                          color: context.smartColor.outline.neutral.main,
+            child: ValueListenableBuilder(
+              valueListenable: _selectedLogoNotifier,
+              builder: (_, value, __) => StaggeredGrid.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: SmartDimension.size16.w,
+                mainAxisSpacing: SmartDimension.size16.h,
+                children: List.generate(
+                  SmartLogo.values.length,
+                  (index) => SmartCard(
+                    onTap: () =>
+                        _selectedLogoNotifier.value = SmartLogo.values[index],
+                    width: 140.w,
+                    bgColor: value == SmartLogo.values[index]
+                        ? context.smartColor.background.subtle.info
+                        : context.smartColor.background.card.main,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        SmartAsset.logo(
+                          width: 100.w,
+                          height: 100.h,
+                          logo: SmartLogo.values[index],
+                          fit: BoxFit.contain,
                         ),
-                        color: value == SmartLogo.values[index]
-                            ? context.smartColor.background.subtle.info
-                            : context.smartColor.background.card.main,
-                      ),
-                      padding: EdgeInsets.all(SmartDimension.size16.r),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SmartAsset.logo(
-                            width: 100.w,
-                            height: 100.h,
-                            logo: SmartLogo.values[index],
-                            fit: BoxFit.contain,
-                          ),
-                          SmartTextBodyXs(
-                            SmartLogo.values[index].name,
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
+                        SmartTextBodyXs(
+                          SmartLogo.values[index].name,
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                     ),
                   ),
                 ),

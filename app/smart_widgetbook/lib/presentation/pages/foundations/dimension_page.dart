@@ -216,51 +216,36 @@ class _DimensionItem extends StatelessWidget {
   final void Function(String value)? onSelected;
 
   @override
-  Widget build(BuildContext context) => AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        height: 120,
-        decoration: BoxDecoration(
-          color: isSelected
-              ? context.smartColor.background.subtle.info
-              : context.smartColor.background.card.main,
-          borderRadius: BorderRadius.circular(SmartBorderRadius.sm),
-          border: Border.all(
-            color: context.smartColor.outline.neutral.main,
-          ),
-          boxShadow: context.smartShadow.card,
-        ),
-        child: Material(
-          color: Colors.transparent,
-          borderRadius: BorderRadius.circular(SmartBorderRadius.sm),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(SmartBorderRadius.sm),
-            onTap: onSelected == null
-                ? null
-                : () {
-                    onSelected!.call(name);
-                  },
-            child: Padding(
-              padding: EdgeInsets.all(SmartDimension.size8.r),
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: size.w,
-                      height: size.w,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          size < 20 ? 2.r : SmartBorderRadius.xs,
-                        ),
-                        color: context.smartColor.background.neutral.inverse,
-                      ),
-                    ),
-                    Gap(SmartDimension.size4.h),
-                    SmartTextBodySm(name),
-                  ],
+  Widget build(BuildContext context) => SmartCard(
+        height: 120.h,
+        borderRadius: BorderRadius.circular(SmartBorderRadius.sm),
+        padding: EdgeInsets.all(SmartDimension.size8.r),
+        bgColor: isSelected
+            ? context.smartColor.background.subtle.info
+            : context.smartColor.background.card.main,
+        onTap: onSelected == null
+            ? null
+            : () {
+                onSelected!.call(name);
+              },
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: size.w,
+                height: size.w,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(
+                    size < 20 ? 2.r : SmartBorderRadius.xs,
+                  ),
+                  color: context.smartColor.background.neutral.inverse,
                 ),
               ),
-            ),
+              Gap(SmartDimension.size4.h),
+              SmartTextBodySm(name),
+            ],
           ),
         ),
       );
