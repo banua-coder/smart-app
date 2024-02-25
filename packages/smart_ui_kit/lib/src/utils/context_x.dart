@@ -6,4 +6,6 @@ extension BuildContextX on BuildContext {
       Theme.of(this).extension<SmartColorExtension>()!;
 
   SmartColorExtension get smartColor => _colorExtension as SmartColorExtension;
+
+  bool get isDarkTheme => Theme.of(this).brightness == Brightness.dark;
 }

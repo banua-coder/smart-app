@@ -53,7 +53,7 @@ class ErrorApp extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         SmartAsset.logo(
-                          logo: SmartLogo.logo,
+                          logo: SmartLogo.smart,
                           width: 100,
                           fit: BoxFit.contain,
                         ),

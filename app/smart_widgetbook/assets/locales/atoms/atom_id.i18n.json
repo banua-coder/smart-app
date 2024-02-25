@@ -1,0 +1,18 @@
+{
+    "title": "Atom",
+    "description": "Atom adalah blok penyusun dasar dalam metodologi Desain Atom, yang mewakili elemen dasar UI terkecil seperti tombol, kolom masukan, dan ikon. Mereka berfungsi secara independen, meletakkan dasar bagi struktur yang lebih kompleks dengan menggabungkan untuk membentuk molekul dan organisme dalam kerangka UI.",
+    "childrens": {
+        "animations": {
+            "title": "Animasi",
+            "description": "Ini adalah preview dari Komponen Animasi. Anda dapat menggunakannya dengan menggunakannya seperti contoh di bawah ini."
+        },
+        "button": {
+            "title": "Tombol",
+            "description": "Ini adalah preview dari Komponen Tombol. Anda dapat menggunakannya dengan menggunakannya seperti contoh di bawah ini."
+        },
+        "logo": {
+            "title": "Logo",
+            "description": "Ini adalah preview dari Komponen Logo. Anda dapat menggunakannya dengan menggunakannya seperti contoh di bawah ini."
+        }
+    }
+}

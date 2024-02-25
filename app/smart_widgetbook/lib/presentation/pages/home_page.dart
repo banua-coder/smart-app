@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_syntax_view/flutter_syntax_view.dart';
 
 import 'package:smart_ui_kit/smart_ui_kit.dart';
-import 'package:smart_widgetbook/presentation/pages/animation_page.dart';
-import 'package:smart_widgetbook/presentation/pages/button_page.dart';
-import 'package:smart_widgetbook/presentation/pages/color_page.dart';
-import 'package:smart_widgetbook/presentation/pages/logo_page.dart';
+import 'package:smart_widgetbook/gen/assets.gen.dart';
+import 'package:smart_widgetbook/presentation/pages/atoms/atom_page.dart';
+import 'package:smart_widgetbook/presentation/pages/foundations/foundations.dart';
+
 import 'package:smart_widgetbook/smart_widgetbook.dart';
+import 'package:smart_widgetbook/translations/translations.g.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,44 +17,64 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Smart UI Kit'),
+        title: SmartAsset.logo(
+          logo: SmartLogo.smart,
+          fit: BoxFit.cover,
+          width: 120.w,
+        ),
         actions: const [
           ThemeSwitcherButton(),
         ],
       ),
       body: ListView(
-        padding: EdgeInsets.only(
-          top: 16.h,
-          left: 20.w,
-          right: 20.w,
-          bottom: 32.h,
-        ),
-        shrinkWrap: true,
-        children: const [
-          _SectionTitle(
-            title: 'Assets',
+        padding: EdgeInsets.all(SmartDimension.size16.r),
+        children: [
+          SmartTextHeadingXl(context.translation.general.showcase),
+          Gap(SmartDimension.size16.h),
+          SmartTextBody(
+            context.translation.general.description,
           ),
-          _Button(
-            name: 'Animation',
-            page: AnimationPage(),
+          Gap(SmartDimension.size16.h),
+          const CodeSnippetWidget(
+            code: '''
+dependencies:
+   smart_ui_kit:
+      path: ../packages/smart_ui_kit
+            ''',
+            syntax: Syntax.YAML,
           ),
-          _Button(
-            name: 'Logo',
-            page: LogoPage(),
-          ),
-          _SectionTitle(
-            title: 'Core',
-          ),
-          _Button(
-            name: 'Color',
-            page: ColorPage(),
-          ),
-          _SectionTitle(
-            title: 'Components',
-          ),
-          _Button(
-            name: 'Button',
-            page: ButtonPage(),
+          Gap(SmartDimension.size24.h),
+          StaggeredGrid.count(
+            crossAxisCount: 2,
+            crossAxisSpacing: SmartDimension.size16.w,
+            mainAxisSpacing: SmartDimension.size16.h,
+            children: [
+              _ComponentCard(
+                label: 'Foundations',
+                animation: Assets.animations.templates,
+                page: const FoundationPage(),
+              ),
+              _ComponentCard(
+                label: context.translation.atom.title,
+                animation: Assets.animations.atoms,
+                page: const AtomPage(),
+              ),
+              _ComponentCard(
+                label: 'Molecules',
+                animation: Assets.animations.molecules,
+                page: const AtomPage(),
+              ),
+              _ComponentCard(
+                label: 'Organism',
+                animation: Assets.animations.organism,
+                page: const AtomPage(),
+              ),
+              _ComponentCard(
+                label: 'Templates',
+                animation: Assets.animations.tokens,
+                page: const AtomPage(),
+              ),
+            ],
           ),
         ],
       ),
@@ -60,44 +82,48 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class _SectionTitle extends StatelessWidget {
-  const _SectionTitle({required this.title});
-  final String title;
+class _ComponentCard extends StatelessWidget {
+  const _ComponentCard({
+    required this.label,
+    required this.animation,
+    required this.page,
+  });
 
-  @override
-  Widget build(BuildContext context) => Padding(
-        padding: EdgeInsets.only(
-          top: 30.h,
-        ),
-        child: Text(
-          title,
-          style: TextStyle(
-            fontSize: 24.sp,
-            fontWeight: FontWeight.w600,
-          ),
-          textAlign: TextAlign.start,
-        ),
-      );
-}
-
-class _Button extends StatelessWidget {
-  const _Button({required this.name, required this.page});
-
-  final String name;
+  final String label;
   final Widget page;
+  final LottieGenImage animation;
 
   @override
-  Widget build(BuildContext context) => Padding(
-        padding: EdgeInsets.only(
-          top: 16.h,
+  Widget build(BuildContext context) => Material(
+        color: context.smartColor.background.card.main,
+        elevation: 10,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(SmartBorderRadius.md),
+          side: BorderSide(
+            color: context.smartColor.outline.neutral.main,
+          ),
         ),
-        child: SmartButton.primary(
-          label: name,
-          onPressed: () async {
-            await Navigator.of(context).push(
-              MaterialPageRoute<dynamic>(builder: (context) => page),
-            );
-          },
+        shadowColor:
+            context.smartColor.background.neutral.inverse.withOpacity(0.1),
+        child: InkWell(
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute<dynamic>(
+              builder: (context) => page,
+            ),
+          ),
+          borderRadius: BorderRadius.circular(SmartBorderRadius.md),
+          child: Padding(
+            padding: EdgeInsets.all(SmartDimension.size16.r),
+            child: Column(
+              children: [
+                animation.lottie(),
+                Gap(SmartDimension.size8.h),
+                SmartTextHeadingXs(
+                  label,
+                ),
+              ],
+            ),
+          ),
         ),
       );
 }

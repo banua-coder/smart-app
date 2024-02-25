@@ -19,8 +19,11 @@ class $AssetsLottieGen {
   LottieGenImage get maintenance =>
       const LottieGenImage('assets/lottie/maintenance.json');
 
+  /// File path: assets/lottie/wifi.json
+  LottieGenImage get wifi => const LottieGenImage('assets/lottie/wifi.json');
+
   /// List of all assets
-  List<LottieGenImage> get values => [maintenance];
+  List<LottieGenImage> get values => [maintenance, wifi];
 }
 
 class $AssetsSvgGen {
@@ -32,15 +35,24 @@ class $AssetsSvgGen {
 class $AssetsSvgLogoGen {
   const $AssetsSvgLogoGen();
 
-  /// File path: assets/svg/logo/logo.svg
-  SvgGenImage get logo => const SvgGenImage('assets/svg/logo/logo.svg');
+  /// File path: assets/svg/logo/banua_coder.svg
+  SvgGenImage get banuaCoder =>
+      const SvgGenImage('assets/svg/logo/banua_coder.svg');
 
-  /// File path: assets/svg/logo/logo_dark.svg
-  SvgGenImage get logoDark =>
-      const SvgGenImage('assets/svg/logo/logo_dark.svg');
+  /// File path: assets/svg/logo/banua_coder_dark.svg
+  SvgGenImage get banuaCoderDark =>
+      const SvgGenImage('assets/svg/logo/banua_coder_dark.svg');
+
+  /// File path: assets/svg/logo/smart.svg
+  SvgGenImage get smart => const SvgGenImage('assets/svg/logo/smart.svg');
+
+  /// File path: assets/svg/logo/smart_dark.svg
+  SvgGenImage get smartDark =>
+      const SvgGenImage('assets/svg/logo/smart_dark.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [logo, logoDark];
+  List<SvgGenImage> get values =>
+      [banuaCoder, banuaCoderDark, smart, smartDark];
 }
 
 class Assets {
