@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:smart_ui_kit/smart_ui_kit.dart';
 import 'package:smart_ui_kit/src/foundations/foundations.dart';
 
 @immutable
@@ -15,6 +16,13 @@ class SmartTheme {
         backgroundColor: SmartColorFoundation.bgMain,
         surfaceTintColor: Colors.transparent,
         centerTitle: false,
+      ),
+      dividerTheme: DividerThemeData(
+        space: 0,
+        color: SmartColorFoundation.outlineNeutralSubtle,
+      ),
+      popupMenuTheme: PopupMenuThemeData(
+        color: SmartColorFoundation.bgCardMain,
       ),
     );
 
@@ -38,6 +46,13 @@ class SmartTheme {
         backgroundColor: SmartColorFoundation.bgMainDark,
         surfaceTintColor: Colors.transparent,
         centerTitle: false,
+      ),
+      popupMenuTheme: PopupMenuThemeData(
+        color: SmartColorFoundation.bgCardMainDark,
+      ),
+      dividerTheme: DividerThemeData(
+        space: 0,
+        color: SmartColorFoundation.outlineNeutralSubtleDark,
       ),
     );
 
