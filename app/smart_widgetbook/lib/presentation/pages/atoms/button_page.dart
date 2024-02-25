@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_syntax_view/flutter_syntax_view.dart';
 import 'package:smart_ui_kit/smart_ui_kit.dart';
 import 'package:smart_widgetbook/smart_widgetbook.dart';
+import 'package:smart_widgetbook/translations/translations.g.dart';
 
 class ButtonPage extends StatefulWidget {
   const ButtonPage({super.key});
@@ -9,90 +11,202 @@ class ButtonPage extends StatefulWidget {
   State<ButtonPage> createState() => _ButtonPageState();
 }
 
-class _ButtonPageState extends State<ButtonPage> {
+class _ButtonPageState extends State<ButtonPage>
+    with SingleTickerProviderStateMixin {
   late final ValueNotifier<SmartButtonSize> _buttonSizeNotifier;
+  late final ValueNotifier<int> _activeTabNotifier;
+  late final TabController _tabController;
 
   @override
   void initState() {
     super.initState();
+    _tabController = TabController(length: 4, vsync: this)
+      ..addListener(_tabControllerListener);
+    _activeTabNotifier = ValueNotifier(0);
     _buttonSizeNotifier = ValueNotifier(SmartButtonSize.md);
   }
 
   @override
   void dispose() {
+    _activeTabNotifier.dispose();
+    _tabController
+      ..removeListener(_tabControllerListener)
+      ..dispose();
     _buttonSizeNotifier.dispose();
     super.dispose();
   }
 
+  void _tabControllerListener() {
+    _activeTabNotifier.value = _tabController.index;
+  }
+
+  List<String> get _codes => [
+        '''
+    
+        /// For Primary Button
+        SmartButton.primary(
+          size: ${_buttonSizeNotifier.value},
+          type: SmartButtonType.filled,
+        );
+        /// or
+        SmartButton(
+           variant: SmartButtonVariant.primary,
+           size: ${_buttonSizeNotifier.value},
+           type: SmartButtonType.filled,
+        );
+
+        ''',
+        '''
+    
+        /// For Secondary Button
+        SmartButton.secondary(
+          size: ${_buttonSizeNotifier.value},
+          type: SmartButtonType.outline,
+        );
+        /// or
+        SmartButton(
+           variant: SmartButtonVariant.secondary,
+           size: ${_buttonSizeNotifier.value},
+           type: SmartButtonType.outline,
+        );
+
+        ''',
+        '''
+    
+        /// For Tertiary Button
+        SmartButton.tertiary(
+          size: ${_buttonSizeNotifier.value},
+          type: SmartButtonType.ghost,
+        );
+        /// or
+        SmartButton(
+           variant: SmartButtonVariant.tertiary,
+           size: ${_buttonSizeNotifier.value},
+           type: SmartButtonType.ghost,
+        );
+
+        ''',
+        '''
+    
+        /// For Danger Button
+        SmartButton.danger(
+          size: ${_buttonSizeNotifier.value},
+          type: SmartButtonType.filled,
+        );
+        /// or
+        SmartButton(
+           variant: SmartButtonVariant.danger,
+           size: ${_buttonSizeNotifier.value},
+           type: SmartButtonType.filled,
+        );
+
+        '''
+      ];
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 4,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Button'),
-          bottom: TabBar(
-            tabAlignment: TabAlignment.start,
-            indicatorColor: context.smartColor.icon.solid.primary,
-            labelColor: context.smartColor.text.solid.primary,
-            isScrollable: true,
-            tabs: List.generate(
-              SmartButtonVariant.values.length,
-              (index) => Tab(
-                text: SmartButtonVariant.values[index].name.toUpperCase(),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Button'),
+        actions: [
+          ValueListenableBuilder(
+            valueListenable: _buttonSizeNotifier,
+            builder: (_, value, __) => PopupMenuButton<SmartButtonSize>(
+              initialValue: _buttonSizeNotifier.value,
+              surfaceTintColor: context.smartColor.background.card.main,
+              onSelected: (value) => _buttonSizeNotifier.value = value,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(
+                  SmartBorderRadius.md,
+                ),
+              ),
+              child: Chip(
+                avatar: Icon(
+                  Icons.swap_vert_rounded,
+                  color: context.smartColor.icon.neutral.main,
+                  size: 20.sp,
+                ),
+                label: SmartTextBodySm(
+                  value.name,
+                  fontWeight: FontWeight.bold,
+                  color: context.smartColor.text.neutral.strong,
+                ),
+              ),
+              itemBuilder: (context) => List.generate(
+                SmartButtonSize.values.length,
+                (index) => PopupMenuItem(
+                  value: SmartButtonSize.values[index],
+                  child: Text('${SmartButtonSize.values[index]}'),
+                ),
               ),
             ),
           ),
-          actions: [
-            ValueListenableBuilder(
-              valueListenable: _buttonSizeNotifier,
-              builder: (_, value, __) => PopupMenuButton<SmartButtonSize>(
-                initialValue: _buttonSizeNotifier.value,
-                surfaceTintColor: context.smartColor.background.card.main,
-                onSelected: (value) => _buttonSizeNotifier.value = value,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                    SmartBorderRadius.md,
-                  ),
+          const ThemeSwitcherButton(),
+        ],
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(SmartDimension.size16.r),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SmartTextBodySm(
+                  context.translation.atom.childrens.button.description,
                 ),
-                child: Chip(
-                  avatar: Icon(
-                    Icons.swap_vert_rounded,
-                    color: context.smartColor.icon.neutral.main,
-                    size: 20.sp,
-                  ),
-                  label: SmartTextBodySm(
-                    value.name,
-                    fontWeight: FontWeight.bold,
-                    color: context.smartColor.text.neutral.strong,
-                  ),
+                Gap(SmartDimension.size16.h),
+                ValueListenableBuilder(
+                  valueListenable: _buttonSizeNotifier,
+                  builder: (_, __, ___) {
+                    return ValueListenableBuilder(
+                      valueListenable: _activeTabNotifier,
+                      builder: (_, value, __) {
+                        return CodeSnippetWidget(
+                          code: _codes[value],
+                          syntax: Syntax.DART,
+                        );
+                      },
+                    );
+                  },
                 ),
-                itemBuilder: (context) => List.generate(
-                  SmartButtonSize.values.length,
-                  (index) => PopupMenuItem(
-                    value: SmartButtonSize.values[index],
-                    child: Text('${SmartButtonSize.values[index]}'),
-                  ),
+              ],
+            ),
+          ),
+          PreferredSize(
+            preferredSize: Size(1.sw, 120.h),
+            child: TabBar(
+              controller: _tabController,
+              tabAlignment: TabAlignment.start,
+              indicatorColor: context.smartColor.icon.solid.primary,
+              labelColor: context.smartColor.text.solid.primary,
+              isScrollable: true,
+              tabs: List.generate(
+                SmartButtonVariant.values.length,
+                (index) => Tab(
+                  text: SmartButtonVariant.values[index].name.toUpperCase(),
                 ),
               ),
             ),
-            const ThemeSwitcherButton(),
-          ],
-        ),
-        body: TabBarView(
-          children: List.generate(
-            SmartButtonVariant.values.length,
-            (index) => ValueListenableBuilder(
-              valueListenable: _buttonSizeNotifier,
-              builder: (_, size, __) {
-                return _ButtonList(
-                  size: size,
-                  variant: SmartButtonVariant.values[index],
-                );
-              },
+          ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: List.generate(
+                SmartButtonVariant.values.length,
+                (index) => ValueListenableBuilder(
+                  valueListenable: _buttonSizeNotifier,
+                  builder: (_, size, __) {
+                    return _ButtonList(
+                      size: size,
+                      variant: SmartButtonVariant.values[index],
+                    );
+                  },
+                ),
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
