@@ -43,62 +43,62 @@ class _ButtonPageState extends State<ButtonPage>
   List<String> get _codes => [
         '''
     
-        /// For Primary Button
-        SmartButton.primary(
-          size: ${_buttonSizeNotifier.value},
-          type: SmartButtonType.filled,
-        );
-        /// or
-        SmartButton(
-           variant: SmartButtonVariant.primary,
-           size: ${_buttonSizeNotifier.value},
-           type: SmartButtonType.filled,
-        );
+/// For Primary Button
+SmartButton.primary(
+  size: ${_buttonSizeNotifier.value},
+  type: SmartButtonType.filled,
+);
+/// or
+SmartButton(
+   variant: SmartButtonVariant.primary,
+   size: ${_buttonSizeNotifier.value},
+   type: SmartButtonType.filled,
+);
 
         ''',
         '''
     
-        /// For Secondary Button
-        SmartButton.secondary(
-          size: ${_buttonSizeNotifier.value},
-          type: SmartButtonType.outline,
-        );
-        /// or
-        SmartButton(
-           variant: SmartButtonVariant.secondary,
-           size: ${_buttonSizeNotifier.value},
-           type: SmartButtonType.outline,
-        );
+/// For Secondary Button
+SmartButton.secondary(
+  size: ${_buttonSizeNotifier.value},
+  type: SmartButtonType.outline,
+);
+/// or
+SmartButton(
+   variant: SmartButtonVariant.secondary,
+   size: ${_buttonSizeNotifier.value},
+   type: SmartButtonType.outline,
+);
 
         ''',
         '''
     
-        /// For Tertiary Button
-        SmartButton.tertiary(
-          size: ${_buttonSizeNotifier.value},
-          type: SmartButtonType.ghost,
-        );
-        /// or
-        SmartButton(
-           variant: SmartButtonVariant.tertiary,
-           size: ${_buttonSizeNotifier.value},
-           type: SmartButtonType.ghost,
-        );
+/// For Tertiary Button
+SmartButton.tertiary(
+  size: ${_buttonSizeNotifier.value},
+  type: SmartButtonType.ghost,
+);
+/// or
+SmartButton(
+   variant: SmartButtonVariant.tertiary,
+   size: ${_buttonSizeNotifier.value},
+   type: SmartButtonType.ghost,
+);
 
         ''',
         '''
     
-        /// For Danger Button
-        SmartButton.danger(
-          size: ${_buttonSizeNotifier.value},
-          type: SmartButtonType.filled,
-        );
-        /// or
-        SmartButton(
-           variant: SmartButtonVariant.danger,
-           size: ${_buttonSizeNotifier.value},
-           type: SmartButtonType.filled,
-        );
+/// For Danger Button
+SmartButton.danger(
+  size: ${_buttonSizeNotifier.value},
+  type: SmartButtonType.filled,
+);
+/// or
+SmartButton(
+   variant: SmartButtonVariant.danger,
+   size: ${_buttonSizeNotifier.value},
+   type: SmartButtonType.filled,
+);
 
         '''
       ];
@@ -172,6 +172,10 @@ class _ButtonPageState extends State<ButtonPage>
                 ),
               ],
             ),
+          ),
+          Divider(
+            thickness: 1.sp,
+            color: context.smartColor.outline.neutral.subtle,
           ),
           PreferredSize(
             preferredSize: Size(1.sw, 120.h),

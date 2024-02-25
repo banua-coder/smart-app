@@ -43,6 +43,7 @@ Text(
               ],
             ),
           ),
+          const Divider(),
           Expanded(
             child: ListView.builder(
               itemCount: getColors(context).length,

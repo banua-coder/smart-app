@@ -26,55 +26,70 @@ class HomePage extends StatelessWidget {
           ThemeSwitcherButton(),
         ],
       ),
-      body: ListView(
-        padding: EdgeInsets.all(SmartDimension.size16.r),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SmartTextHeadingXl(context.translation.general.showcase),
-          Gap(SmartDimension.size16.h),
-          SmartTextBody(
-            context.translation.general.description,
-          ),
-          Gap(SmartDimension.size16.h),
-          const CodeSnippetWidget(
-            code: '''
-dependencies:
-   smart_ui_kit:
+          Padding(
+            padding: EdgeInsets.all(
+              SmartDimension.size16.r,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SmartTextHeadingXl(context.translation.general.showcase),
+                Gap(SmartDimension.size16.h),
+                SmartTextBody(
+                  context.translation.general.description,
+                ),
+                Gap(SmartDimension.size16.h),
+                const CodeSnippetWidget(
+                  code: '''
+      dependencies:
+         smart_ui_kit:
       path: ../packages/smart_ui_kit
             ''',
-            syntax: Syntax.YAML,
+                  syntax: Syntax.YAML,
+                ),
+              ],
+            ),
           ),
-          Gap(SmartDimension.size24.h),
-          StaggeredGrid.count(
-            crossAxisCount: 2,
-            crossAxisSpacing: SmartDimension.size16.w,
-            mainAxisSpacing: SmartDimension.size16.h,
-            children: [
-              _ComponentCard(
-                label: 'Foundations',
-                animation: Assets.animations.templates,
-                page: const FoundationPage(),
+          const Divider(),
+          Expanded(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(SmartDimension.size16),
+              child: StaggeredGrid.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: SmartDimension.size16.w,
+                mainAxisSpacing: SmartDimension.size16.h,
+                children: [
+                  _ComponentCard(
+                    label: 'Foundations',
+                    animation: Assets.animations.templates,
+                    page: const FoundationPage(),
+                  ),
+                  _ComponentCard(
+                    label: context.translation.atom.title,
+                    animation: Assets.animations.atoms,
+                    page: const AtomPage(),
+                  ),
+                  _ComponentCard(
+                    label: 'Molecules',
+                    animation: Assets.animations.molecules,
+                    page: const AtomPage(),
+                  ),
+                  _ComponentCard(
+                    label: 'Organism',
+                    animation: Assets.animations.organism,
+                    page: const AtomPage(),
+                  ),
+                  _ComponentCard(
+                    label: 'Templates',
+                    animation: Assets.animations.tokens,
+                    page: const AtomPage(),
+                  ),
+                ],
               ),
-              _ComponentCard(
-                label: context.translation.atom.title,
-                animation: Assets.animations.atoms,
-                page: const AtomPage(),
-              ),
-              _ComponentCard(
-                label: 'Molecules',
-                animation: Assets.animations.molecules,
-                page: const AtomPage(),
-              ),
-              _ComponentCard(
-                label: 'Organism',
-                animation: Assets.animations.organism,
-                page: const AtomPage(),
-              ),
-              _ComponentCard(
-                label: 'Templates',
-                animation: Assets.animations.tokens,
-                page: const AtomPage(),
-              ),
-            ],
+            ),
           ),
         ],
       ),

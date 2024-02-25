@@ -2,9 +2,21 @@
     "title": "Foundation",
     "description": "Foundation Layer berfungsi sebagai jembatan kritis antara atom dan token dalam Desain Atomik, menetapkan sistem yang kohesif yang menjamin konsistensi dan skalabilitas. Mereka menerjemahkan token desain—seperti warna, tipografi, dan spasi—menjadi elemen UI yang dapat digunakan (atom), meletakkan dasar untuk sistem desain yang harmonis dan efektif.",
     "children": {
+        "border_radius": {
+            "title": "Border Radius",
+            "description": "Package ini menyertakan ukuran BorderRadius yang telah ditentukan sebelumnya, mulai dari xs, sm, md, hingga lg, yang dapat diakses sebagai anggota statis dari kelas SmartBorderRadius. Gunakan mereka seperti yang ditunjukkan pada contoh di bawah ini."
+        },
         "color": {
+            "title": "Dimensi",
+            "description": "Paket ini menyediakan ukuran dan jarak yang telah ditentukan sebelumnya, mulai dari 2, 4, 8, hingga 72, yang dapat diakses sebagai anggota statis dari kelas SmartDimension. Gunakan mereka seperti yang ditunjukkan dalam kode contoh di bawah ini."
+        },
+        "dimension": {
             "title": "Warna",
             "description": "Package ini memanfaatkan ThemeExtension dari Flutter untuk pengelolaan warna, memungkinkan akses warna dari context. Pendekatan ini memastikan warna dapat diperbarui secara dinamis seiring dengan perubahan Brightness pada ThemeData. Untuk menggunakan warna dari package ini, silakan lihat contoh kode di bawah ini."
+        },
+        "shadow": {
+            "title": "Bayangan",
+            "description": "Package ini memanfaatkan ThemeExtension dari Flutter untuk pengelolaan bayangan, memungkinkan akses bayangan dari context. Pendekatan ini memastikan warna dan gaya bayangan dapat diperbarui secara dinamis seiring dengan perubahan Brightness pada ThemeData. Untuk menggunakan shadow dari package ini, silakan lihat contoh kode di bawah ini."
         }
     }
 }

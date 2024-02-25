@@ -53,19 +53,19 @@ class SmartBackgroundNeutralColor extends SmartNeutralColor {
   });
 
   factory SmartBackgroundNeutralColor.light() => SmartBackgroundNeutralColor._(
-        main: SmartColors.bgMain,
-        subtle: SmartColors.bgSubtle,
-        strong: SmartColors.bgStrong,
-        inverse: SmartColors.bgInverse,
-        white: SmartColors.bgWhite,
+        main: SmartColorFoundation.bgMain,
+        subtle: SmartColorFoundation.bgSubtle,
+        strong: SmartColorFoundation.bgStrong,
+        inverse: SmartColorFoundation.bgInverse,
+        white: SmartColorFoundation.bgWhite,
       );
 
   factory SmartBackgroundNeutralColor.dark() => SmartBackgroundNeutralColor._(
-        main: SmartColors.bgMainDark,
-        subtle: SmartColors.bgSubtleDark,
-        strong: SmartColors.bgStrongDark,
-        inverse: SmartColors.bgInverseDark,
-        white: SmartColors.bgWhiteDark,
+        main: SmartColorFoundation.bgMainDark,
+        subtle: SmartColorFoundation.bgSubtleDark,
+        strong: SmartColorFoundation.bgStrongDark,
+        inverse: SmartColorFoundation.bgInverseDark,
+        white: SmartColorFoundation.bgWhiteDark,
       );
 
   SmartBackgroundNeutralColor lerp(
@@ -90,15 +90,15 @@ class SmartOutlineNeutralColor extends SmartNeutralColor {
   });
 
   factory SmartOutlineNeutralColor.light() => SmartOutlineNeutralColor._(
-        main: Colors.black.withOpacity(0.1),
-        subtle: Colors.black.withOpacity(0.05),
-        strong: Colors.black.withOpacity(0.25),
+        main: SmartColorFoundation.outlineNeutralMain,
+        subtle: SmartColorFoundation.outlineNeutralSubtle,
+        strong: SmartColorFoundation.outlineNeutralStrong,
       );
 
   factory SmartOutlineNeutralColor.dark() => SmartOutlineNeutralColor._(
-        main: Colors.white.withOpacity(0.1),
-        subtle: Colors.white.withOpacity(0.05),
-        strong: Colors.white.withOpacity(0.25),
+        main: SmartColorFoundation.outlineNeutralMainDark,
+        subtle: SmartColorFoundation.outlineNeutralSubtleDark,
+        strong: SmartColorFoundation.outlineNeutralStrongDark,
       );
 
   SmartOutlineNeutralColor lerp(

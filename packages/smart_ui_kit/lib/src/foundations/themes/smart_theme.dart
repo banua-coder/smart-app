@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smart_ui_kit/src/foundations/foundations.dart';
-import 'package:smart_ui_kit/src/tokens/colors/colors.dart';
 
 @immutable
 class SmartTheme {
@@ -11,11 +10,18 @@ class SmartTheme {
 
   factory SmartTheme.light(ThemeData themeData) {
     final data = themeData.copyWith(
-      scaffoldBackgroundColor: SmartColors.bgMain,
+      scaffoldBackgroundColor: SmartColorFoundation.bgMain,
       appBarTheme: AppBarTheme(
-        backgroundColor: SmartColors.bgMain,
+        backgroundColor: SmartColorFoundation.bgMain,
         surfaceTintColor: Colors.transparent,
         centerTitle: false,
+      ),
+      dividerTheme: DividerThemeData(
+        space: 0,
+        color: SmartColorFoundation.outlineNeutralSubtle,
+      ),
+      popupMenuTheme: PopupMenuThemeData(
+        color: SmartColorFoundation.bgCardMain,
       ),
     );
 
@@ -24,6 +30,7 @@ class SmartTheme {
       extensions: [
         SmartAssetExtension.light(),
         SmartColorExtension.light(),
+        SmartShadowExtension.light(),
       ],
       brightness: Brightness.light,
     );
@@ -33,11 +40,18 @@ class SmartTheme {
 
   factory SmartTheme.dark(ThemeData themeData) {
     final data = themeData.copyWith(
-      scaffoldBackgroundColor: SmartColors.bgMainDark,
+      scaffoldBackgroundColor: SmartColorFoundation.bgMainDark,
       appBarTheme: AppBarTheme(
-        backgroundColor: SmartColors.bgMainDark,
+        backgroundColor: SmartColorFoundation.bgMainDark,
         surfaceTintColor: Colors.transparent,
         centerTitle: false,
+      ),
+      popupMenuTheme: PopupMenuThemeData(
+        color: SmartColorFoundation.bgCardMainDark,
+      ),
+      dividerTheme: DividerThemeData(
+        space: 0,
+        color: SmartColorFoundation.outlineNeutralSubtleDark,
       ),
     );
 
@@ -46,6 +60,7 @@ class SmartTheme {
       extensions: [
         SmartAssetExtension.dark(),
         SmartColorExtension.dark(),
+        SmartShadowExtension.dark(),
       ],
       brightness: Brightness.dark,
     );

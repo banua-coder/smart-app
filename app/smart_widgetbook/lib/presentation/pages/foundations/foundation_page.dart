@@ -15,8 +15,20 @@ class FoundationPage extends StatelessWidget {
             context.translation.foundation.description,
           ),
           SectionButton(
+            name: context.translation.foundation.children.borderRadius.title,
+            page: const BorderRadiusPage(),
+          ),
+          SectionButton(
+            name: context.translation.foundation.children.dimension.title,
+            page: const DimensionPage(),
+          ),
+          SectionButton(
             name: context.translation.foundation.children.color.title,
             page: const ColorPage(),
+          ),
+          SectionButton(
+            name: context.translation.foundation.children.shadow.title,
+            page: const ShadowPage(),
           ),
         ],
       );
