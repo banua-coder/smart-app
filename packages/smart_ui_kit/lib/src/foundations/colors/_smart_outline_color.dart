@@ -13,26 +13,26 @@ class SmartOutlineColor {
   factory SmartOutlineColor.light() => SmartOutlineColor._(
         neutral: SmartOutlineNeutralColor.light(),
         color: SmartSemanticColor(
-          primary: SmartColors.primary.shade500.withOpacity(0.25),
-          secondary: SmartColors.secondary.shade500.withOpacity(0.25),
-          error: SmartColors.error.shade500.withOpacity(0.25),
-          success: SmartColors.success.shade500.withOpacity(0.25),
-          info: SmartColors.info.shade500.withOpacity(0.25),
-          warning: SmartColors.warning.shade500.withOpacity(0.25),
-          gray: SmartColors.gray.shade500.withOpacity(0.25),
+          primary: SmartColorFoundation.outlinePrimary,
+          secondary: SmartColorFoundation.outlineSecondary,
+          error: SmartColorFoundation.outlineError,
+          success: SmartColorFoundation.outlineSuccess,
+          info: SmartColorFoundation.outlineInfo,
+          warning: SmartColorFoundation.outlineWarning,
+          gray: SmartColorFoundation.outlineGray,
         ),
       );
 
   factory SmartOutlineColor.dark() => SmartOutlineColor._(
         neutral: SmartOutlineNeutralColor.dark(),
         color: SmartSemanticColor(
-          primary: SmartColors.primary.shade300.withOpacity(0.25),
-          secondary: SmartColors.secondary.shade300.withOpacity(0.25),
-          error: SmartColors.error.shade300.withOpacity(0.25),
-          success: SmartColors.success.shade300.withOpacity(0.25),
-          info: SmartColors.info.shade300.withOpacity(0.25),
-          warning: SmartColors.warning.shade300.withOpacity(0.25),
-          gray: SmartColors.gray.shade300.withOpacity(0.25),
+          primary: SmartColorFoundation.outlinePrimaryDark,
+          secondary: SmartColorFoundation.outlineSecondaryDark,
+          error: SmartColorFoundation.outlineErrorDark,
+          success: SmartColorFoundation.outlineSuccessDark,
+          info: SmartColorFoundation.outlineInfoDark,
+          warning: SmartColorFoundation.outlineWarningDark,
+          gray: SmartColorFoundation.outlineGrayDark,
         ),
       );
 

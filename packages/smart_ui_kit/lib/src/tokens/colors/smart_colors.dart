@@ -127,36 +127,4 @@ class SmartColors {
       900: Color(0xFF523A00),
     },
   );
-
-  static final Color bgMain = gray.shade50;
-  static final Color bgSubtle = gray.shade100;
-  static final Color bgStrong = gray.shade200;
-  static final Color bgWhite = gray[0]!;
-  static final Color bgInverse = gray.shade900;
-  static final Color textMain = gray.shade700;
-  static final Color textSubtle = gray.shade500;
-  static final Color textStrong = gray.shade900;
-  static final Color textDisabled = gray.shade400;
-  static final Color textInverse = gray[0]!;
-  static final Color iconMain = gray.shade700;
-  static final Color iconSubtle = gray.shade500;
-  static final Color iconStrong = gray.shade900;
-  static final Color iconDisabled = gray.shade400;
-  static final Color iconInverse = gray[0]!;
-
-  static final Color bgMainDark = gray.shade900;
-  static final Color bgSubtleDark = gray.shade800;
-  static final Color bgStrongDark = gray.shade700;
-  static final Color bgWhiteDark = gray.shade900;
-  static final Color bgInverseDark = gray[0]!;
-  static final Color textMainDark = gray.shade100;
-  static final Color textSubtleDark = gray.shade400;
-  static final Color textStrongDark = gray[0]!;
-  static final Color textDisabledDark = gray.shade500;
-  static final Color textInverseDark = gray.shade900;
-  static final Color iconMainDark = gray.shade100;
-  static final Color iconSubtleDark = gray.shade400;
-  static final Color iconStrongDark = gray[0]!;
-  static final Color iconDisabledDark = gray.shade500;
-  static final Color iconInverseDark = gray.shade900;
 }

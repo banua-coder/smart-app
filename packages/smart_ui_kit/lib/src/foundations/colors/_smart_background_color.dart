@@ -17,22 +17,22 @@ class SmartBackgroundColor {
   factory SmartBackgroundColor.light() => SmartBackgroundColor._(
         neutral: SmartBackgroundNeutralColor.light(),
         solid: SmartSemanticColor(
-          primary: SmartColors.primary.shade500,
-          secondary: SmartColors.secondary.shade500,
-          error: SmartColors.error.shade500,
-          success: SmartColors.success.shade500,
-          info: SmartColors.info.shade500,
-          warning: SmartColors.warning.shade500,
-          gray: SmartColors.gray.shade800,
+          primary: SmartColorFoundation.bgPrimary,
+          secondary: SmartColorFoundation.bgSecondary,
+          error: SmartColorFoundation.bgError,
+          success: SmartColorFoundation.bgSuccess,
+          info: SmartColorFoundation.bgInfo,
+          warning: SmartColorFoundation.bgWarning,
+          gray: SmartColorFoundation.bgGray,
         ),
         subtle: SmartSemanticColor(
-          primary: SmartColors.primary.shade50,
-          secondary: SmartColors.secondary.shade50,
-          error: SmartColors.error.shade100,
-          success: SmartColors.success.shade50,
-          info: SmartColors.info[25]!,
-          warning: SmartColors.warning.shade50,
-          gray: SmartColors.gray[25]!,
+          primary: SmartColorFoundation.bgPrimarySubtle,
+          secondary: SmartColorFoundation.bgSecondarySubtle,
+          error: SmartColorFoundation.bgErrorSubtle,
+          success: SmartColorFoundation.bgSuccessSubtle,
+          info: SmartColorFoundation.bgInfoSubtle,
+          warning: SmartColorFoundation.bgWarningSubtle,
+          gray: SmartColorFoundation.bgGraySubtle,
         ),
         card: SmartBackgroundCardColor.light(),
       );
@@ -40,22 +40,22 @@ class SmartBackgroundColor {
   factory SmartBackgroundColor.dark() => SmartBackgroundColor._(
         neutral: SmartBackgroundNeutralColor.dark(),
         solid: SmartSemanticColor(
-          primary: SmartColors.primary.shade600,
-          secondary: SmartColors.secondary.shade600,
-          error: SmartColors.error.shade600,
-          success: SmartColors.success.shade600,
-          info: SmartColors.info.shade600,
-          warning: SmartColors.warning.shade600,
-          gray: SmartColors.gray.shade600,
+          primary: SmartColorFoundation.bgPrimaryDark,
+          secondary: SmartColorFoundation.bgSecondaryDark,
+          error: SmartColorFoundation.bgErrorDark,
+          success: SmartColorFoundation.bgSuccessDark,
+          info: SmartColorFoundation.bgInfoDark,
+          warning: SmartColorFoundation.bgWarningDark,
+          gray: SmartColorFoundation.bgGrayDark,
         ),
         subtle: SmartSemanticColor(
-          primary: SmartColors.primary.shade900,
-          secondary: SmartColors.secondary.shade900,
-          error: SmartColors.error.shade900,
-          success: SmartColors.success.shade900,
-          info: SmartColors.info.shade900,
-          warning: SmartColors.warning.shade900,
-          gray: SmartColors.gray.shade900,
+          primary: SmartColorFoundation.bgPrimarySubtleDark,
+          secondary: SmartColorFoundation.bgSecondarySubtleDark,
+          error: SmartColorFoundation.bgErrorSubtleDark,
+          success: SmartColorFoundation.bgSuccessSubtleDark,
+          info: SmartColorFoundation.bgInfoSubtleDark,
+          warning: SmartColorFoundation.bgWarningSubtleDark,
+          gray: SmartColorFoundation.bgGraySubtleDark,
         ),
         card: SmartBackgroundCardColor.dark(),
       );
@@ -82,13 +82,13 @@ class SmartBackgroundCardColor {
   });
 
   factory SmartBackgroundCardColor.light() => SmartBackgroundCardColor._(
-        main: SmartColors.gray[0]!,
-        secondary: SmartColors.gray.shade50,
+        main: SmartColorFoundation.bgCardMain,
+        secondary: SmartColorFoundation.bgCardSecondary,
       );
 
   factory SmartBackgroundCardColor.dark() => SmartBackgroundCardColor._(
-        main: SmartColors.gray.shade800,
-        secondary: SmartColors.gray.shade700,
+        main: SmartColorFoundation.bgCardMainDark,
+        secondary: SmartColorFoundation.bgCardSecondaryDark,
       );
 
   SmartBackgroundCardColor lerp(SmartBackgroundCardColor? other, double t) =>
