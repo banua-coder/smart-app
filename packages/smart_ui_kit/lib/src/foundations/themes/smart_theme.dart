@@ -23,6 +23,7 @@ class SmartTheme {
       extensions: [
         SmartAssetExtension.light(),
         SmartColorExtension.light(),
+        SmartShadowExtension.light(),
       ],
       brightness: Brightness.light,
     );
@@ -45,6 +46,7 @@ class SmartTheme {
       extensions: [
         SmartAssetExtension.dark(),
         SmartColorExtension.dark(),
+        SmartShadowExtension.dark(),
       ],
       brightness: Brightness.dark,
     );
