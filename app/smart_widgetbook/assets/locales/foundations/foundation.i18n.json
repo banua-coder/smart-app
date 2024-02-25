@@ -2,9 +2,21 @@
     "title": "Foundations",
     "description": "Foundations serve as the critical bridge between atoms and tokens in Atomic Design, establishing a cohesive system that ensures consistency and scalability. They translate design tokens—like colors, typography, and spacing—into usable UI elements (atoms), laying the groundwork for a harmonious and effective design system.",
     "children": {
+        "border_radius": {
+            "title": "Border Radius",
+            "description": "This package includes predefined BorderRadius sizes ranging from xs, sm, md, to lg, accessible as static members of the SmartBorderRadius class. Utilize them as demonstrated in the example below."
+        },
         "color": {
             "title": "Colors",
             "description": "This package leverages Flutter's ThemeExtension to manage colors, allowing for context-based color access. This approach ensures dynamic color updates in response to changes in ThemeData's brightness. To use a color from this package, refer to the example code provided below."
+        },
+        "dimension": {
+            "title": "Dimension",
+            "description": "This package includes predefined sizes and spacings ranging from 2, 4, 8, up to 72, accessible as static members of the SmartDimension class. Use them as demonstrated in the example code below."
+        },
+        "shadow": {
+            "title": "Shadow",
+            "description": "This package leverages Flutter's ThemeExtension to manage shadows, allowing for context-based shadow access. This approach ensures dynamic shadow color and style updates in response to changes in ThemeData's brightness. To use a shadow from this package, refer to the example code provided below."
         }
     }
 }
