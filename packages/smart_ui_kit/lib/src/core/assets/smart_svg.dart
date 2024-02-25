@@ -3,16 +3,20 @@ import 'package:smart_ui_kit/src/core/generated/assets.gen.dart';
 
 @immutable
 class SmartSvg {
-  final SvgGenImage logo;
+  final SvgGenImage banuaCoder;
+  final SvgGenImage smart;
 
   const SmartSvg._({
-    required this.logo,
+    required this.banuaCoder,
+    required this.smart,
   });
 
   factory SmartSvg.light() => SmartSvg._(
-        logo: Assets.svg.logo.logo,
+        banuaCoder: Assets.svg.logo.banuaCoder,
+        smart: Assets.svg.logo.smart,
       );
   factory SmartSvg.dark() => SmartSvg._(
-        logo: Assets.svg.logo.logoDark,
+        banuaCoder: Assets.svg.logo.banuaCoderDark,
+        smart: Assets.svg.logo.smartDark,
       );
 }

@@ -4,11 +4,17 @@ import 'package:smart_ui_kit/src/core/generated/assets.gen.dart';
 import 'package:smart_ui_kit/src/utils/asset_x.dart';
 
 enum SmartLogo {
-  logo;
+  banuaCoder,
+  smart;
 
   SmartAssetData<dynamic> get data => switch (this) {
-        logo => SmartAssetData<SvgGenImage>(
-            file: (context) => context.smartAsset.svg.logo,
+        banuaCoder => SmartAssetData<SvgGenImage>(
+            file: (context) => context.smartAsset.svg.banuaCoder,
+            type: SmartAssetType.svg,
+            overrideColor: false,
+          ),
+        smart => SmartAssetData<SvgGenImage>(
+            file: (context) => context.smartAsset.svg.smart,
             type: SmartAssetType.svg,
             overrideColor: false,
           ),
