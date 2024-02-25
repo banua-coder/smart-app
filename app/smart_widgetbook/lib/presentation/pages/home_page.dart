@@ -109,36 +109,20 @@ class _ComponentCard extends StatelessWidget {
   final LottieGenImage animation;
 
   @override
-  Widget build(BuildContext context) => Material(
-        color: context.smartColor.background.card.main,
-        elevation: 10,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(SmartBorderRadius.md),
-          side: BorderSide(
-            color: context.smartColor.outline.neutral.main,
+  Widget build(BuildContext context) => SmartCard(
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute<dynamic>(
+            builder: (context) => page,
           ),
         ),
-        shadowColor:
-            context.smartColor.background.neutral.inverse.withOpacity(0.1),
-        child: InkWell(
-          onTap: () => Navigator.of(context).push(
-            MaterialPageRoute<dynamic>(
-              builder: (context) => page,
+        child: Column(
+          children: [
+            animation.lottie(),
+            Gap(SmartDimension.size8.h),
+            SmartTextHeadingXs(
+              label,
             ),
-          ),
-          borderRadius: BorderRadius.circular(SmartBorderRadius.md),
-          child: Padding(
-            padding: EdgeInsets.all(SmartDimension.size16.r),
-            child: Column(
-              children: [
-                animation.lottie(),
-                Gap(SmartDimension.size8.h),
-                SmartTextHeadingXs(
-                  label,
-                ),
-              ],
-            ),
-          ),
+          ],
         ),
       );
 }

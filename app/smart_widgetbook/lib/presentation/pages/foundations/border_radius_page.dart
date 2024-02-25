@@ -131,34 +131,20 @@ class _BorderRadiusItem extends StatelessWidget {
   final void Function(String value)? onSelected;
 
   @override
-  Widget build(BuildContext context) => AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+  Widget build(BuildContext context) => SmartCard(
         width: 160.w,
         height: 160.h,
-        decoration: BoxDecoration(
-          color: isSelected
-              ? context.smartColor.background.subtle.info
-              : context.smartColor.background.card.main,
-          borderRadius: BorderRadius.circular(radius),
-          border: Border.all(
-            color: context.smartColor.outline.neutral.main,
-          ),
-          boxShadow: context.smartShadow.card,
-        ),
-        child: Material(
-          color: Colors.transparent,
-          borderRadius: BorderRadius.circular(radius),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(radius),
-            onTap: onSelected == null
-                ? null
-                : () {
-                    onSelected!.call(name);
-                  },
-            child: Center(
-              child: SmartTextBody(name),
-            ),
-          ),
+        borderRadius: BorderRadius.circular(radius),
+        onTap: onSelected == null
+            ? null
+            : () {
+                onSelected!.call(name);
+              },
+        bgColor: isSelected
+            ? context.smartColor.background.subtle.info
+            : context.smartColor.background.card.main,
+        child: Center(
+          child: SmartTextBody(name),
         ),
       );
 }

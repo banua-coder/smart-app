@@ -67,54 +67,42 @@ SmartAsset.animation(
           const Divider(),
           SingleChildScrollView(
             padding: EdgeInsets.all(SmartDimension.size16.r),
-            child: StaggeredGrid.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: SmartDimension.size16.w,
-              mainAxisSpacing: SmartDimension.size16.h,
-              children: List.generate(
-                SmartAnimations.values.length,
-                (index) => InkWell(
-                  onTap: () => _selectedAnimationNotifier.value =
-                      SmartAnimations.values[index],
-                  borderRadius: BorderRadius.circular(SmartBorderRadius.md),
-                  child: ValueListenableBuilder(
-                    valueListenable: _selectedAnimationNotifier,
-                    builder: (_, value, __) => AnimatedContainer(
-                      duration: const Duration(milliseconds: 300),
-                      width: 140.w,
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.circular(SmartBorderRadius.md),
-                        border: Border.all(
-                          color: context.smartColor.outline.neutral.main,
+            child: ValueListenableBuilder(
+              valueListenable: _selectedAnimationNotifier,
+              builder: (_, value, __) => StaggeredGrid.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: SmartDimension.size16.w,
+                mainAxisSpacing: SmartDimension.size16.h,
+                children: List.generate(
+                  SmartAnimations.values.length,
+                  (index) => SmartCard(
+                    width: 140.w,
+                    onTap: () => _selectedAnimationNotifier.value =
+                        SmartAnimations.values[index],
+                    bgColor: value == SmartAnimations.values[index]
+                        ? context.smartColor.background.subtle.info
+                        : context.smartColor.background.card.main,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        SmartAsset.animation(
+                          width: 100.w,
+                          height: 100.h,
+                          animation: SmartAnimations.values[index],
+                          fit: BoxFit.contain,
                         ),
-                        color: value == SmartAnimations.values[index]
-                            ? context.smartColor.background.subtle.info
-                            : context.smartColor.background.card.main,
-                      ),
-                      padding: EdgeInsets.all(SmartDimension.size16.r),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          SmartAsset.animation(
-                            width: 100.w,
-                            height: 100.h,
-                            animation: SmartAnimations.values[index],
-                            fit: BoxFit.contain,
+                        Gap(SmartDimension.size8.h),
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                            horizontal: SmartDimension.size16.w,
                           ),
-                          Gap(SmartDimension.size8.h),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: SmartDimension.size16.w,
-                            ),
-                            child: SmartTextBodyXs(
-                              SmartAnimations.values[index].name,
-                              textAlign: TextAlign.center,
-                            ),
+                          child: SmartTextBodyXs(
+                            SmartAnimations.values[index].name,
+                            textAlign: TextAlign.center,
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

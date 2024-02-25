@@ -147,4 +147,7 @@ class SmartColorFoundation {
   static final Color iconInfoDark = SmartColors.info.shade400;
   static final Color iconWarningDark = SmartColors.warning.shade400;
   static final Color iconGrayDark = SmartColors.gray.shade400;
+
+  static final Color overlay = Colors.black.withOpacity(0.25);
+  static final Color overlayDark = Colors.black.withOpacity(0.75);
 }

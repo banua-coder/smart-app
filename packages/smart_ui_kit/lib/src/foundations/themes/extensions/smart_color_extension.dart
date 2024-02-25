@@ -24,7 +24,7 @@ class SmartColorExtension extends ThemeExtension<SmartColorExtension> {
         icon: SmartIconColor.light(),
         action: SmartActionColor.create(),
         outline: SmartOutlineColor.light(),
-        overlay: Colors.black.withOpacity(0.25),
+        overlay: SmartColorFoundation.overlay,
       );
   factory SmartColorExtension.dark() => SmartColorExtension._(
         background: SmartBackgroundColor.dark(),
@@ -32,7 +32,7 @@ class SmartColorExtension extends ThemeExtension<SmartColorExtension> {
         icon: SmartIconColor.dark(),
         action: SmartActionColor.create(),
         outline: SmartOutlineColor.dark(),
-        overlay: Colors.black.withOpacity(0.75),
+        overlay: SmartColorFoundation.overlayDark,
       );
 
   @override

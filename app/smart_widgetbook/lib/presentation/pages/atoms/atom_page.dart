@@ -22,6 +22,10 @@ class AtomPage extends StatelessWidget {
             name: context.translation.atom.childrens.button.title,
             page: const ButtonPage(),
           ),
+          const SectionButton(
+            name: 'Card',
+            page: CardPage(),
+          ),
           SectionButton(
             name: context.translation.atom.childrens.logo.title,
             page: const LogoPage(),
