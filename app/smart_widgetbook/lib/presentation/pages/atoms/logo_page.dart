@@ -35,31 +35,39 @@ class _LogoPageState extends State<LogoPage> {
           ThemeSwitcherButton(),
         ],
       ),
-      body: Padding(
-        padding: EdgeInsets.all(SmartDimension.size16.r),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SmartTextBodySm(
-              context.translation.atom.childrens.button.description,
-            ),
-            Gap(SmartDimension.size16.h),
-            ValueListenableBuilder(
-              valueListenable: _selectedLogoNotifier,
-              builder: (_, value, __) => CodeSnippetWidget(
-                code: '''
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(SmartDimension.size16.r),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SmartTextBodySm(
+                  context.translation.atom.childrens.button.description,
+                ),
+                Gap(SmartDimension.size16.h),
+                ValueListenableBuilder(
+                  valueListenable: _selectedLogoNotifier,
+                  builder: (_, value, __) => CodeSnippetWidget(
+                    code: '''
 
 /// To use logo.
 SmartAsset.logo(
   logo: $value,
 );
-
-                    ''',
-                syntax: Syntax.DART,
-              ),
+          
+                        ''',
+                    syntax: Syntax.DART,
+                  ),
+                ),
+              ],
             ),
-            Gap(SmartDimension.size16.h),
-            StaggeredGrid.count(
+          ),
+          const Divider(),
+          SingleChildScrollView(
+            padding: EdgeInsets.all(SmartDimension.size16.r),
+            child: StaggeredGrid.count(
               crossAxisCount: 2,
               crossAxisSpacing: SmartDimension.size16.w,
               mainAxisSpacing: SmartDimension.size16.h,
@@ -106,8 +114,8 @@ SmartAsset.logo(
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
