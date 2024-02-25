@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smart_ui_kit/smart_ui_kit.dart';
 import 'package:smart_ui_kit/src/foundations/foundations.dart';
 
 @immutable
