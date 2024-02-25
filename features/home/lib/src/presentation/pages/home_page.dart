@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         leadingWidth: 120,
         leading: SmartAsset.logo(
-          logo: SmartLogo.logo,
+          logo: SmartLogo.smart,
           width: 120.w,
           height: 120.h,
           fit: BoxFit.cover,
