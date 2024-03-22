@@ -13,4 +13,4 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  melos: ^4.0.0
+  melos: ^5.2.1
